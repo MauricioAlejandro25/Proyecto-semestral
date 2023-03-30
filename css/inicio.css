@@ -1,0 +1,9 @@
+.carousel-item{
+    height: 30rem;
+    background:blue ;
+}
+
+.d-block{
+    height: 100%;
+    width: 100%;
+}
