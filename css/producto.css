@@ -165,20 +165,23 @@ main{
 .card-list-products{
   display: grid;
   grid-template-columns: repeat(4,1fr);
-  gap: 30px;
+  gap: 10px;
 }
 .card{
   cursor: pointer;
   margin: auto;
+  width: 400px;
 }
 
 .card-img{
   background: transparent;
   margin-bottom: 15px;
+  
 }
 
 .card-img img{
-  height: 400px;
+  padding: auto ;
+  height: auto;
   object-fit: cover;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
