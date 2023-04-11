@@ -1,7 +1,6 @@
 *{
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 body{
   max-width: auto;
@@ -17,16 +16,18 @@ img{
   color: #222;
 }
 main{
+  margin: 20px;
   display: flex;
   gap: 30px;
   margin-bottom: 80px;
 }
 .container-img{
+  margin: 20px;
+  width: 900px;
   display: flex;
   flex-direction: column;
   background: #f7f7f9;
   flex: 1;
-  margin: 20px;
 }
 .conteiner-info-product{
   flex: 1;
@@ -145,7 +146,6 @@ main{
   padding: 10px 0;
   align-items: center;
   border-bottom: 1px solid #e4e4e4;
-  margin: 20px;
 }
 .conteiner-button-social a:link,
 .conteiner-button-social a:visited{
@@ -165,43 +165,47 @@ main{
   margin-bottom: 30px;
 }
 .card-list-products{
-  display: flex;
-  flex-direction: column;
+  display: grid;
   grid-template-columns: repeat(4,1fr);
-  gap: 10px;
+  gap: 35px;
 }
 .card{
   cursor: pointer;
-  margin: auto;
-  width: 400px;
+  margin: 10px 0;
 }
-
 .card-img{
   background: transparent;
   margin-bottom: 15px;
-  
 }
 
 .card-img img{
-  padding: auto ;
   height: 400px;
+  margin: 0;
   object-fit: cover;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 .info-card{
+  padding: 10px;
+  margin: 10px;
   display: flex;
   justify-content: space-between;
-  margin: 15px;
 }
 .text-product{
+  
   color: #252525;
   line-height: 1.4;
 }
 .category{
   text-align: left;
 }
-@media only screen and (max-width: 600px) {
-  body {
-    background-color: lightblue;
+@media (max-width: 900px) {
+  .card-list-products {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 900px) {
+  .container-img {
+    width: auto;
   }
 }
