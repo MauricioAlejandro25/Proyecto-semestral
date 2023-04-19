@@ -1,0 +1,16 @@
+.container{
+    color: rgba(0, 195, 255, 0.945);
+    background: black;
+    box-sizing: border-box;
+    padding: 40px 0;
+    box-shadow: 0 0 6px 0 rgba(0, 183, 255, 0.8);
+    border-radius: 50px;
+    width: 100%;
+    margin: auto;
+   
+    
+    
+}
+body{
+    background: white;
+}
