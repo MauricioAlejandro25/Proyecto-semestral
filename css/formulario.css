@@ -14,3 +14,11 @@
 body{
     background: white;
 }
+
+.warnings{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: blueviolet;
+    padding-top: 20px;
+}
