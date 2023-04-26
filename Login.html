@@ -67,22 +67,32 @@
           <form action="" method="post" id="form" class="mb-5">
             <div class="form">
 
-              <div class="grupo mb-4">
-                <label for=""  class="form-label font-weight-bold">Email</label>
-                <input type="email" name="" class="form-control bg-dark-x border-0" id="email"> <span class="barra"></span>
+              <div class="formulario__grupo" id="grupo__usuario">
+                <label for="usuario" class="formulario__label">Usuario</label>
+                <div class="formulario__grupo-input">
+                  <input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="">
+                  
+                </div>
+                
               </div>
-
-              <div class=" grupo mb-4">
-                <label for="" class="form-label font-weight-bold">Contraseña</label>
-                <input type="password" name="" class="form-control bg-dark-x border-0 mb-2" id="password"> <span class="barra"></span>
-
-
-                <a href="Recuperar.Contraseña.html" id="emailHelp"
-                  class="form-text text-muted text-decoration-none">¿Has olvidado tu contraseña?</a>
+              <div class="formulario__grupo" id="grupo__password">
+                <label for="password" class="formulario__label">Contraseña</label>
+                <div class="formulario__grupo-input">
+                  <input type="password" class="formulario__input" name="password" id="password">
+                  
+                </div> <br>
+                <a href="Recuperar.Contraseña.html" 
+                  class="form-text text-muted text-decoration-none">¿Has olvidado tu contraseña?</a> <br>
+                
               </div>
+              <br>
 
-              <button type="submit" class="btn btn-primary w-100">iniciar </button>
-              <p class="warnings" id="warnings"></p>
+              
+
+              <div class="formulario__grupo formulario__grupo-btn-enviar">
+                <button type="submit" class="formulario__btn">Iniciar</button>
+                
+              </div>
 
             </div>
 
