@@ -107,6 +107,11 @@ img {
   display: none;
 }
 
+.btn{
+  display: flex;
+  margin: 5px 5px;
+}
+
 @media screen and (max-width: 720px) {
   img {
     max-width: 100%;
