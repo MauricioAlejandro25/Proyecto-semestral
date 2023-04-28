@@ -2,25 +2,23 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/inicio.css">
-    <link rel="stylesheet" href="css/principales.css">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script src="js/filtro.js"></script>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/inicio.css">
+  <link rel="stylesheet" href="css/principales.css">
 
-    <title>Accesorios</title>
+  <title>Accesorios</title>
 </head>
 
 <body>
   <nav class="navbar navbar-expand-md navbar-dark bg-black">
-    <div class="container-fluid"> 
+    <div class="container-fluid">
       <a class="navbar-brand" href="inicio.html">
         <i class="bi bi-gem"></i>
         <span class="text-info">ALL STYLE</span>
@@ -55,326 +53,333 @@
           <li class="nav-item">
             <a class="nav-link" href="accinicio.html">ACCESORIOS</a>
           </li>
-        
           <li class="nav-item dropdown">
           </li>
         </ul>
-          <hr class="d-md-none text-white-50">
+        <hr class="d-md-none text-white-50">
         <ul class="navbar-nav  flex-row flex-wrap text-light">
           <li class="nav-item col-6 col-md-auto p-3">
-            <a href="carrito.html" class="btn-floating btn-sm text-white" style="font-size: 25px;"><i class="bi bi-bag-fill"></i></a>
+            <a href="carrito.html" class="btn-floating btn-sm text-white" style="font-size: 25px;"><i
+                class="bi bi-bag-fill"></i></a>
             <small class="d-md-none ms-2"></small>
           </li>
         </ul>
         <form class="d-flex">
           <li class="nav-item col-6 col-md-auto p-3">
-          </i> <a href="Login.html" class="btn-floating btn-sm text-white" style="font-size: 25px;"><i
-                  class="bi bi-person-circle"></i></a>
-          <small class="d-md-none ms-2"></small>
-      </li>
+            </i> <a href="Login.html" class="btn-floating btn-sm text-white" style="font-size: 25px;"><i
+                class="bi bi-person-circle"></i></a>
+            <small class="d-md-none ms-2"></small>
+          </li>
         </form>
       </div>
     </div>
   </nav>
-    
 
-  <div class=".col-sm">
-        <h1>Zapatillas y ropa de hombre</h1>
+  <div class="col-sm">
+    <h1>Accesorios</h1>
   </div>
-  
+
   <div class="container">
-    <div class="category_list" >
-        <div class="wrapper">
-          <header>
-            <h2 style="text-align: center;">Filtro</h2>
-            <p>Use el control deslizante o ingrese el precio mínimo y máximo</p>
-          </header>
-          <div class="price-input">
-            <div class="field">
-              <span>Min</span>
-              <input type="number" class="input-min" value="2500">
-            </div>
-            <div class="separator">-</div>
-            <div class="field">
-              <span>Max</span>
-              <input type="number" class="input-max" value="7500">
-            </div>
+    <div class="category_list">
+      <div class="wrapper">
+        <header>
+          <h2 style="text-align: center;">Filtro</h2>
+          <p>Use el control deslizante o ingrese el precio mínimo y máximo</p>
+        </header>
+        <div class="price-input">
+          <div class="field">
+            <span>Min</span>
+            <input type="number" class="input-min" value="2500">
           </div>
-          <div class="slider">
-            <div class="progress"></div>
+          <div class="separator">-</div>
+          <div class="field">
+            <span>Max</span>
+            <input type="number" class="input-max" value="7500">
           </div>
-          <div class="range-input">
-            <input type="range" class="range-min" min="0" max="10000" value="2500" step="100">
-            <input type="range" class="range-max" min="0" max="10000" value="7500" step="100">
-          </div>
-          </div>
-        <div class="wrapper">
-          <div class="dropdown" data-control="checkbox-dropdown">
-            <h5>SELECCIONE FILTRO:</h5>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                  Género
-                </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample" >
-                <div class="accordion-body">
-                  <div class="dropdown-list">
-                    <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 1" checked="checked"/>
-                      Hombre
-                    </label>
-                    
-                    <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 2" />
-                      Mujer
-                    </label>
-                    
-                    <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 3" />
-                      Niño
-                    </label>  
-                  </div>
+        </div>
+        <div class="slider">
+          <div class="progress"></div>
+        </div>
+        <div class="range-input">
+          <input type="range" class="range-min" min="0" max="10000" value="2500" step="100">
+          <input type="range" class="range-max" min="0" max="10000" value="7500" step="100">
+        </div>
+      </div>
+      <div class="wrapper">
+        <div class="dropdown" data-control="checkbox-dropdown">
+          <h5>SELECCIONE FILTRO:</h5>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                Género
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <div class="dropdown-list">
+                  <label class="dropdown-option">
+                    <input type="checkbox" name="dropdown-group" value="Selection 1" checked="checked" />
+                    Hombre
+                  </label>
+
+                  <label class="dropdown-option">
+                    <input type="checkbox" name="dropdown-group" value="Selection 2" />
+                    Mujer
+                  </label>
+
+                  <label class="dropdown-option">
+                    <input type="checkbox" name="dropdown-group" value="Selection 3" />
+                    Niño
+                  </label>
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Categoría
-                </button>
-              </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample" style="">
-                <div class="accordion-body">
-                  <div class="dropdown-list">
-                    <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 1" />
-                      Life style
-                    </label>
-                    
-                    <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 2" />
-                      Deportivo
-                    </label>    
-                  </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Categoría
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+              data-bs-parent="#accordionExample" style="">
+              <div class="accordion-body">
+                <div class="dropdown-list">
+                  <label class="dropdown-option">
+                    <input type="checkbox" name="dropdown-group" value="Selection 1" />
+                    Life style
+                  </label>
+
+                  <label class="dropdown-option">
+                    <input type="checkbox" name="dropdown-group" value="Selection 2" />
+                    Deportivo
+                  </label>
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#headingThree" aria-expanded="false" aria-controls="headingThree">
-                  Marca
-                </button>
-              </h2>
-              <div id="headingThree" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample" style="">
-                <div class="accordion-body">
-                  <div class="dropdown-list">
-                    <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 1" />
-                      Champion
-                    </label>
-                    
-                    <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 2" />
-                      Tommy hilfiger
-                    </label>
-                    
-                    <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 3" />
-                      Jordan
-                    </label>
-                    
-                    <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 4" />
-                      Adidas
-                    </label>
-                    
-                    <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 5" />
-                      Kappa
-                    </label>    
-                    <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 5" />
-                      Nike
-                    </label>  
-                    <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 5" />
-                      Reebok
-                    </label>    
-                    <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 5" />
-                      Converse
-                    </label>  
-                    <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 5" />
-                      Fila
-                    </label> 
-                    <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 5" />
-                      Vans
-                    </label>  
-                    <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 5" />
-                      New Balance
-                    </label>   
-                  </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#headingThree" aria-expanded="false" aria-controls="headingThree">
+                Marca
+              </button>
+            </h2>
+            <div id="headingThree" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+              data-bs-parent="#accordionExample" style="">
+              <div class="accordion-body">
+                <div class="dropdown-list">
+                  <label class="dropdown-option">
+                    <input type="checkbox" name="dropdown-group" value="Selection 1" />
+                    Champion
+                  </label>
+
+                  <label class="dropdown-option">
+                    <input type="checkbox" name="dropdown-group" value="Selection 2" />
+                    Tommy hilfiger
+                  </label>
+
+                  <label class="dropdown-option">
+                    <input type="checkbox" name="dropdown-group" value="Selection 3" />
+                    Jordan
+                  </label>
+
+                  <label class="dropdown-option">
+                    <input type="checkbox" name="dropdown-group" value="Selection 4" />
+                    Adidas
+                  </label>
+
+                  <label class="dropdown-option">
+                    <input type="checkbox" name="dropdown-group" value="Selection 5" />
+                    Kappa
+                  </label>
+                  <label class="dropdown-option">
+                    <input type="checkbox" name="dropdown-group" value="Selection 5" />
+                    Nike
+                  </label>
+                  <label class="dropdown-option">
+                    <input type="checkbox" name="dropdown-group" value="Selection 5" />
+                    Reebok
+                  </label>
+                  <label class="dropdown-option">
+                    <input type="checkbox" name="dropdown-group" value="Selection 5" />
+                    Converse
+                  </label>
+                  <label class="dropdown-option">
+                    <input type="checkbox" name="dropdown-group" value="Selection 5" />
+                    Fila
+                  </label>
+                  <label class="dropdown-option">
+                    <input type="checkbox" name="dropdown-group" value="Selection 5" />
+                    Vans
+                  </label>
+                  <label class="dropdown-option">
+                    <input type="checkbox" name="dropdown-group" value="Selection 5" />
+                    New Balance
+                  </label>
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#headingFour" aria-expanded="false" aria-controls="headingFour">
-                  Talla
-                </button>
-              </h2>
-              <div id="headingFour" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample" style="">
-                <div class="accordion-body">
-                  <div class="dropdown-list">
-                    <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 1" />
-                      40 cl
-                    </label>
-                    
-                    <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 2" />
-                      41 cl
-                    </label>
-                    
-                    <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 3" />
-                      42 cl
-                    </label>
-                    
-                    <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 4" />
-                      43 cl
-                    </label>
-                    
-                    <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 5" />
-                      44 cl
-                    </label>      
-                  </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#headingFour" aria-expanded="false" aria-controls="headingFour">
+                Talla
+              </button>
+            </h2>
+            <div id="headingFour" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+              data-bs-parent="#accordionExample" style="">
+              <div class="accordion-body">
+                <div class="dropdown-list">
+                  <label class="dropdown-option">
+                    <input type="checkbox" name="dropdown-group" value="Selection 1" />
+                    40 cl
+                  </label>
+
+                  <label class="dropdown-option">
+                    <input type="checkbox" name="dropdown-group" value="Selection 2" />
+                    41 cl
+                  </label>
+
+                  <label class="dropdown-option">
+                    <input type="checkbox" name="dropdown-group" value="Selection 3" />
+                    42 cl
+                  </label>
+
+                  <label class="dropdown-option">
+                    <input type="checkbox" name="dropdown-group" value="Selection 4" />
+                    43 cl
+                  </label>
+
+                  <label class="dropdown-option">
+                    <input type="checkbox" name="dropdown-group" value="Selection 5" />
+                    44 cl
+                  </label>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
     </div>
-    
-  <div class="products">
-    <div class="row"> 
+
+    <div class="products">
+      <div class="row">
         <div class="col-md">
           <div class="card">
-            <img class="card-img-top" src="img/PUMA PRIME DAD CAP.png">            
+            <img class="card-img-top" src="img/PUMA PRIME DAD CAP.png">
             <div class="card-body">
               <h4 class="card-title">PUMA PRIME DAD CAP</h4>
               <p class="card-text"> $12.990</p>
               <a href="productos/producto_30.html" class="btn btn-primary">Entrar</a>
               <a href="#" class="btn btn-primary">Agregar C</a>
             </div>
-          </div>          
+          </div>
         </div>
-        <div class="col-md">        
+        <div class="col-md">
           <div class="card">
-            <img class="card-img-top" src="img/ACCESORIO NIKE NO SHOW SOCK.png">            
+            <img class="card-img-top" src="img/ACCESORIO NIKE NO SHOW SOCK.png">
             <div class="card-body">
               <h4 class="card-title">ACCESORIO NIKE NO SHOW SOCK</h4>
               <p class="card-text">$14.990</p>
               <a href="productos/producto_21.html" class="btn btn-primary">Entrar</a>
               <a href="#" class="btn btn-primary">Agregar C</a>
             </div>
-          </div>          
+          </div>
         </div>
-        <div class="col-md">        
+        <div class="col-md">
           <div class="card">
-            <img class="card-img-top" src="img/NO SHOW SOCK NIKE U NK EVERYDAY LTWT NS 3PR.png">            
+            <img class="card-img-top" src="img/NO SHOW SOCK NIKE U NK EVERYDAY LTWT NS 3PR.png">
             <div class="card-body">
               <h4 class="card-title">NO SHOW SOCK NIKE U NK</h4>
               <p class="card-text">$14.990</p>
               <a href="productos/producto_22.html" class="btn btn-primary">Entrar</a>
               <a href="#" class="btn btn-primary">Agregar C</a>
             </div>
-          </div>          
+          </div>
         </div>
         <div class="col-md">
           <div class="card">
-            <img class="card-img-top" src="img/CHAMPION LINEAR DAD ADJUSTABLE CAP.png">            
+            <img class="card-img-top" src="img/CHAMPION LINEAR DAD ADJUSTABLE CAP.png">
             <div class="card-body">
               <h4 class="card-title">CHAMPION LINEAR DAD ADJUSTABLE CAP</h4>
               <p class="card-text">$24.990</p>
               <a href="productos/producto_29.html" class="btn btn-primary">Entrar</a>
               <a href="#" class="btn btn-primary">Agregar C</a>
             </div>
-          </div>          
+          </div>
         </div>
         <div class="col-md">
           <div class="card">
-            <img class="card-img-top" src="img/NIKE BACKPACK BLACK-BLACK-WHITE.png">            
+            <img class="card-img-top" src="img/NIKE BACKPACK BLACK-BLACK-WHITE.png">
             <div class="card-body">
               <h4 class="card-title">NIKE BACKPACK BLACK-BLACK-WHITE</h4>
               <p class="card-text">$49.990</p>
               <a href="productos/producto_24.html" class="btn btn-primary">Entrar</a>
               <a href="#" class="btn btn-primary">Agregar C</a>
             </div>
-          </div>          
+          </div>
         </div>
         <div class="col-md">
           <div class="card">
-            <img class="card-img-top" src="img/JORDAN KIDS BANANO CROSSBODY BAG MULTICOLOR.png">            
+            <img class="card-img-top" src="img/JORDAN KIDS BANANO CROSSBODY BAG MULTICOLOR.png">
             <div class="card-body">
               <h4 class="card-title">BANANO CROSSBODY BAG MULTICOLOR</h4>
               <p class="card-text">$27.490</p>
               <a href="productos/producto_27.html" class="btn btn-primary">Entrar</a>
               <a href="#" class="btn btn-primary">Agregar C</a>
             </div>
-          </div>          
+          </div>
         </div>
-        <div class="col-md">        
+        <div class="col-md">
           <div class="card">
-            <img class="card-img-top" src="img/NK HERITAGE BKPK - NIKE AOP BTS22.png">            
+            <img class="card-img-top" src="img/NK HERITAGE BKPK - NIKE AOP BTS22.png">
             <div class="card-body">
               <h4 class="card-title">NK HERITAGE BKPK - NIKE AOP BTS22</h4>
               <p class="card-text">$94.990</p>
-              <a href="productos/producto_25.html" class="btn btn-primary" >Entrar</a>
+              <a href="productos/producto_25.html" class="btn btn-primary">Entrar</a>
               <a href="#" class="btn btn-primary">Agregar C</a>
             </div>
-          </div>          
+          </div>
         </div>
-        <div class="col-md">        
+        <div class="col-md">
           <div class="card">
-            <img class="card-img-top" src="img/MOCHILA ADIDAS UNISEX ADULTO.png">            
+            <img class="card-img-top" src="img/MOCHILA ADIDAS UNISEX ADULTO.png">
             <div class="card-body">
               <h4 class="card-title">MOCHILA ADIDAS UNISEX ADULTO</h4>
               <p class="card-text">$39.990</p>
               <a href="productos/producto_28.html" class="btn btn-primary">Entrar</a>
               <a href="#" class="btn btn-primary">Agregar C</a>
             </div>
-          </div>          
-        </div> 
-        <div class="col-md">        
+          </div>
+        </div>
+        <div class="col-md">
           <div class="card">
-            <img class="card-img-top" src="img/TOMMY JEANS TJW ESSENTIAL BUMBAG.png">            
+            <img class="card-img-top" src="img/TOMMY JEANS TJW ESSENTIAL BUMBAG.png">
             <div class="card-body">
               <h4 class="card-title">TOMMY JEANS TJW BUMBAG</h4>
               <p class="card-text">$29.990</p>
               <a href="productos/producto_26.html" class="btn btn-primary">Entrar</a>
               <a href="#" class="btn btn-primary">Agregar C</a>
             </div>
-          </div>          
-        </div> 
-    </div>  
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
 
-    
-<footer class="bg-dark text-white pt-5 pb-4">
+
+  <footer class="bg-dark text-white pt-5 pb-4">
     <div class="container text-center text-md-left">
       <div class="row text-center text-md-left">
         <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
           <h5 class="text-uppercase md-4 font-weigth-bold text-info"> SOMOS ALL STYLE </h5>
-          <p>Allstyle es una tienda de ropa en línea que se especializa en moda para hombres y mujeres. 
-            Ofrece una amplia selección de prendas, desde ropa casual hasta ropa de noche y accesorios de moda. 
+          <p>Allstyle es una tienda de ropa en línea que se especializa en moda para hombres y mujeres.
+            Ofrece una amplia selección de prendas, desde ropa casual hasta ropa de noche y accesorios de moda.
             Además, ofrece envío gratuito en pedidos superiores a $250.000 y una política de devolución flexible. </p>
         </div>
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
@@ -422,19 +427,23 @@
             <p>Copyright 2023 © ALL STYLE.
               <a href="" style="text-decoration: none;">
                 <strong class="text-warning"></strong>
-              </a></p>
+              </a>
+            </p>
           </div>
           <div class="col-md-5 col-lg-4">
             <div class="text-center text-md-right">
               <ul class="list-unstyled list-inline">
                 <li class="list-inline-item">
-                  <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-facebook"></i></a>
+                  <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                      class="bi bi-facebook"></i></a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-instagram"></i></a>
+                  <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                      class="bi bi-instagram"></i></a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-twitter"></i></a>
+                  <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                      class="bi bi-twitter"></i></a>
                 </li>
               </ul>
             </div>
@@ -442,8 +451,11 @@
         </div>
       </div>
     </div>
-</footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="js/jquery.js"></script>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="js/jquery.js"></script>
 </body>
+
 </html>
