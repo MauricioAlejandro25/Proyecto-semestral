@@ -22,5 +22,13 @@
         "Mujer"
       ],
       "marca": "Adidas"
+    },
+    "producto_4": {
+      "nombre": "CHAMPION LINEAR DAD ADJUSTABLE CAP",
+      "precio": 24990,
+      "genero": [
+        "Hombre"
+      ],
+      "marca": "Champion"
     }
 }
