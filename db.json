@@ -24,7 +24,7 @@
     "nombre": "JORDAN KIDS POLERA ALGODON JORDAN NIÑO",
     "precio": 21990,
     "descripcion": "Jordan es una marca premium de ropa y accesorios inspirada en el legado dinmico la visin y la participacin directa de Michael Jordan. La marca Jordan hizo su debut en 1997 y se ha convertido en una coleccin completa de productos deportivos y de lifestyle de primera calidad.",
-    "colores": [],
+    "colores": null,
     "genero": [
       "Niño",
     ],
@@ -60,7 +60,7 @@
     "nombre": "CHAMPION LINEAR DAD ADJUSTABLE CAP",
     "precio": 24990,
     "descripcion": "CHAMPION LINEAR DAD ADJUSTABLE CAP",
-    "colores": [],
+    "colores": null,
     "genero": [
       "Hombre",
     ],
@@ -72,7 +72,7 @@
     "nombre": "MOCHILA ADIDAS UNISEX ADULTO",
     "precio": 39990,
     "descripcion": "Esta mochila se ha confeccionado en tejido ripstop y luce un estampado de camuflaje en todo el diseño. El bolsillo frontal con cremallera te permite acceder rápidamente a tus pertenencias, mientras que las correas ajustables y moldeadas para los hombros te ayudan a transportar la carga cómodamente.",
-    "colores": [],
+    "colores": null,
     "genero": [
       "Hombre",
       "Mujer",
@@ -80,7 +80,7 @@
     ],
     "categoria": "Deportivo",
     "marca": "Adidas",
-    "tallas": []
+    "tallas": null
   },
   "producto_6": {
     "nombre": "TOMMY JEANS TJW BEST SWEAT PANT",
@@ -95,6 +95,6 @@
     ],
     "categoria": "Deportivo",
     "marca": "Tommy hilfiger",
-    "tallas": []
+    "tallas": null
   }
 }
