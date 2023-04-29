@@ -3,7 +3,7 @@
 
 
 <head>
-    <!-- Required meta tags -->
+    <!-- meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -20,251 +20,260 @@
     <link rel="stylesheet" href="zapatillas.html">
     <link rel="stylesheet" href="ropa.html">
     <link rel="stylesheet" href="accinicio.html">
-    <link rel="stylesheet" href="deportivo.html">
+    <!-- <link rel="stylesheet" href="deportivo.html"> -->
     <link rel="stylesheet" href="css/formulario.css">
     <title>ALL STYLE</title>
+    <link rel="stylesheet" href="css/display.css" />
 </head>
 
+<body class="bg-grey">
 
-<body class="bg-with">
-
-
-
-
-
-
-    <nav class="navbar navbar-expand-md navbar-dark bg-black">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
         <div class="container-fluid">
+          <a class="navbar-brand" href="admin.html">
+            <i class="bi bi-gem"></i>
+            <span class="text-info">PANEL DE ADMINISTRACIÓN</span>
+          </a>
+        </div>
+      </nav>
+
+    <div class="d-flex align-items-center" style="height: 100vh; padding: 8rem 0rem">
+        <div class="container">
+            <div class="row">
+                <div class="col-2"></div>
+
+                <form class="col-sm-10 col-md-8 col-xl-8" action="" id="formulario_favoritos">
+                    <div class="">
+                        <div class="d-flex mb-2">
+                            <input type="checkbox" id="checkbox_favorito_1"></input>
+                            <label for="checkbox_favorito_1" class="d-block ml-4">Editar favorito 1</label>
+                        </div>
+                        <label for="formFile_favorito_1"  class="form-label">Imagen favorito N.1</label>
+                        <input class="form-control" disabled type="file" id="formFile_favorito_1">
+                        <div class="d-flex mt-4">
+                            <img src="" alt="" class="imagen" id="imagen_favorito_1" >
+                            <i class="bi bi-x-square-fill d-none" id="boton-eliminar-imagen_favorito_1"></i>
+                          <i></i>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Nombre producto</label>
+                            <input class="form-control" id="favorito_1_input_titulo"  disabled name="nombre_favorito_1" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Descripcion</label>
+                            <input class="form-control" id="favorito_1_input_descripcion" disabled name="descripcion_favorito_1" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Precio</label>
+                            <input class="form-control precio" id="favorito_1_input_precio"  disabled name="precio_favorito_1" type="text" />
+                            <div class="invalid-feedback">
+                                - El precio debe ser un número, sin puntos ni comas.
+                            </div>
+
+                            <div class="invalid-feedback">
+                                - El precio debe ser un número mayor a 0 y menor a 1.000.000.
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="d-block my-4" />
 
 
+                    <div class="">
+                        <div class="d-flex mb-2">
+                            <input type="checkbox" id="checkbox_favorito_2"></input>
+                            <label for="checkbox_favorito_2" class="d-block ml-4">Editar favorito 2</label>
+                        </div>
+                        <label for="formFile_favorito_2" class="form-label">Imagen favorito N.2</label>
+                        <input class="form-control" disabled type="file" id="formFile_favorito_2">
+                        <div class="d-flex mt-4">
+                            <img src="" alt="" class="imagen" id="imagen_favorito_2" >
+                            <i class="bi bi-x-square-fill d-none" id="boton-eliminar-imagen_favorito_2"></i>
+                          <i></i>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Nombre producto</label>
+                            <input class="form-control" id="favorito_2_input_titulo" disabled name="nombre_favorito_2" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Descripcion</label>
+                            <input class="form-control" id="favorito_2_input_descripcion" disabled name="descripcion_favorito_2" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Precio</label>
+                            <input class="form-control precio" id="favorito_2_input_precio" disabled name="precio_favorito_2" type="text" />
+
+                            <div class="invalid-feedback">
+                                - El precio debe ser un número, sin puntos ni comas.
+                            </div>
+
+                            <div class="invalid-feedback">
+                                - El precio debe ser un número mayor a 0 y menor a 1.000.000.
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="d-block my-4" />
 
 
-            <a class="navbar-brand" href="inicio.admin.html">
-                <i class="bi bi-gem"></i>
-                <span class="text-info">ALL STYLE</span>
-            </a>
+                    <div class="">
+                        <div class="d-flex mb-2">
+                            <input type="checkbox" id="checkbox_favorito_3"></input>
+                            <label for="checkbox_favorito_3" class="d-block ml-4">Editar favorito 3</label>
+                        </div>
+                        <label for="formFile_favorito_3" class="form-label">Imagen favorito N.3</label>
+                        <input class="form-control" disabled type="file" id="formFile_favorito_3">
+                        <div class="d-flex mt-4">
+                            <img src="" alt="" class="imagen" id="imagen_favorito_3" >
+                            <i class="bi bi-x-square-fill d-none" id="boton-eliminar-imagen_favorito_3"></i>
+                          <i></i>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Nombre producto</label>
+                            <input class="form-control" id="favorito_3_input_titulo" disabled name="nombre_favorito_3" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Descripcion</label>
+                            <input class="form-control" id="favorito_3_input_descripcion" disabled name="descripcion_favorito_3" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Precio</label>
+                            <input class="form-control precio" id="favorito_3_input_precio" disabled name="precio_favorito_3" type="text" />
 
+                            <div class="invalid-feedback">
+                                - El precio debe ser un número, sin puntos ni comas.
+                            </div>
 
+                            <div class="invalid-feedback">
+                                - El precio debe ser un número mayor a 0 y menor a 1.000.000.
+                            </div>
+                        </div>
+                    </div>
 
+                    <hr class="d-block my-4" />
 
+                    
+                    <div class="">
+                        <div class="d-flex mb-2">
+                            <input type="checkbox" id="checkbox_favorito_4"></input>
+                            <label for="checkbox_favorito_4" class="d-block ml-4">Editar favorito 4</label>
+                        </div>
+                        <label for="formFile_favorito_3" class="form-label">Imagen favorito N.4</label>
+                        <input class="form-control" disabled type="file" id="formFile_favorito_4">
+                        <div class="d-flex mt-4">
+                            <img src="" alt="" class="imagen" id="imagen_favorito_4" >
+                            <i class="bi bi-x-square-fill d-none" id="boton-eliminar-imagen_favorito_4"></i>
+                          <i></i>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Nombre producto</label>
+                            <input class="form-control" id="favorito_4_input_titulo" disabled name="nombre_favorito_4" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Descripcion</label>
+                            <input class="form-control" id="favorito_4_input_descripcion" disabled name="descripcion_favorito_4" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Precio</label>
+                            <input class="form-control precio" id="favorito_4_input_precio" disabled name="precio_favorito_4" type="text" />
 
+                            <div class="invalid-feedback">
+                                - El precio debe ser un número, sin puntos ni comas.
+                            </div>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                            <div class="invalid-feedback">
+                                - El precio debe ser un número mayor a 0 y menor a 1.000.000.
+                            </div>
+                        </div>
+                    </div>
 
+                    
 
-
-
-
-
-            <div class="collapse navbar-collapse" id="menu">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="#"></a>
-                    </li>
-
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="Marcas.html">MARCAS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="hombre.html">HOMBRE</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="mujeres.html">MUJERE</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="niños.html">NIÑO</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="zapatillas.html">ZAPATILLAS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="ropa.html">ROPA</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="accinicio.html">ACCESORIOS</a>
-                    </li>
-
-                    <li class="nav-item dropdown">
-
-
-
-
-
-
-                    </li>
-                </ul>
-
-
-                <hr class="d-md-none text-white-50">
-
-
-
-
-
-
-                <ul class="navbar-nav  flex-row flex-wrap text-light">
-
-
-
-
-
-                    <li class="nav-item col-6 col-md-auto p-3">
-                        </i> <a href="#" class="btn-floating btn-sm text-white" style="font-size: 20px;"><i
-                                class="bi bi-bag-fill"></i></a>
-                        <small class="d-md-none ms-2"></small>
-                    </li>
-
-
-
-
-
-
-                </ul>
-
-
-
-
-
-
-                <form class="d-flex">
-
-
-                    <li class="nav-item col-6 col-md-auto p-3">
-                        </i> <a href="#" class="btn-floating btn-sm text-white" style="font-size: 20px;"><i
-                                class="bi bi-person-circle"></i></a>
-                        <small class="d-md-none ms-2"></small>
-                    </li>
-
-
+                    <button class="btn btn-outline-light my-4" type="submit">Guardar cambios</button>
                 </form>
 
-
-
-
+                <div class="col-2"></div>
             </div>
-
-
         </div>
-    </nav>
-    <br>
-
-
-
-
-
-    <div class="container">
-        <div class="row">
-            <div class="col-2">
-
-            </div>
-
-            <div class="col-8">
-                <div class="">
-                    <label for="formFile" class="form-label">Imagen N.1</label>
-                    <input class="form-control" type="file" id="formFile">
-                    <div class="form-group">
-                        <label class="form-label">Nombre producto </label>
-                        <input class="form-control" name="nombre" type="text" required value="" placeholder="PUMA">
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Descripcion </label>
-                        <input class="form-control" name="nombre" type="text" required value=""
-                            placeholder="T7 HOODIE DK">
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Precio</label>
-                        <input class="form-control" name="nombre" type="text" required value="" placeholder="52.000">
-                    </div>
-                </div>
-
-
-                <div class="">
-                    <label for="formFile" class="form-label">Imagen N.1</label>
-                    <input class="form-control" type="file" id="formFile">
-                    <div class="form-group">
-                        <label class="form-label">Nombre producto </label>
-                        <input class="form-control" name="nombre" type="text" required value="" placeholder="JORDAN">
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Descripcion </label>
-                        <input class="form-control" name="nombre" type="text" required value=""
-                            placeholder="AIR JORDAN 1 FLYEASE">
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Precio</label>
-                        <input class="form-control" name="nombre" type="text" required value="" placeholder="$142.000">
-                    </div>
-                </div>
-
-
-                <div class="">
-                    <label for="formFile" class="form-label">Imagen N.2</label>
-                    <input class="form-control" type="file" id="formFile">
-                    <div class="form-group">
-                        <label class="form-label">Nombre producto </label>
-                        <input class="form-control" name="nombre" type="text" required value="" placeholder="VANS">
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Descripcion </label>
-                        <input class="form-control" name="nombre" type="text" required value=""
-                            placeholder="VANS UA SK8-LOW">
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Precio</label>
-                        <input class="form-control" name="nombre" type="text" required value="" placeholder="$59.990">
-                    </div>
-                </div>
-
-
-                <div class="">
-                    <label for="formFile" class="form-label">Imagen N.3</label>
-                    <input class="form-control" type="file" id="formFile">
-                    <div class="form-group">
-                        <label class="form-label">Nombre producto </label>
-                        <input class="form-control" name="nombre" type="text" required value="" placeholder="ADIDAS">
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Descripcion </label>
-                        <input class="form-control" name="nombre" type="text" required value=""
-                            placeholder="ZAPATILLA ADIDAS DROP STEP">
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Precio</label>
-                        <input class="form-control" name="nombre" type="text" required value="" placeholder=" 89.990">
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-2"></div>
-
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
+    <script>
+        const cbx_fav_1 = document.getElementById('checkbox_favorito_1')
+        const cbx_fav_2 = document.getElementById('checkbox_favorito_2')
+        const cbx_fav_3 = document.getElementById('checkbox_favorito_3')
+        const cbx_fav_4 = document.getElementById('checkbox_favorito_4')
+
+        cbx_fav_1.addEventListener('change', (e) => {
+            if (e.target.checked) {
+                // enable inputs
+                document.getElementById('formFile_favorito_1').disabled = false
+                document.getElementById('favorito_1_input_titulo').disabled = false
+                document.getElementById('favorito_1_input_descripcion').disabled = false
+                document.getElementById('favorito_1_input_precio').disabled = false
+            } else {
+                // disable inputs
+                document.getElementById('formFile_favorito_1').disabled = true
+                document.getElementById('favorito_1_input_titulo').disabled = true
+                document.getElementById('favorito_1_input_descripcion').disabled = true
+                document.getElementById('favorito_1_input_precio').disabled = true
 
 
 
+            }
+        })
+
+        cbx_fav_2.addEventListener('change', (e) => {
+            if (e.target.checked) {
+                // enable inputs
+                document.getElementById('formFile_favorito_2').disabled = false
+                document.getElementById('favorito_2_input_titulo').disabled = false
+                document.getElementById('favorito_2_input_descripcion').disabled = false
+                document.getElementById('favorito_2_input_precio').disabled = false
+            } else {
+                // disable inputs
+                document.getElementById('formFile_favorito_2').disabled = true
+                document.getElementById('favorito_2_input_titulo').disabled = true
+                document.getElementById('favorito_2_input_descripcion').disabled = true
+                document.getElementById('favorito_2_input_precio').disabled = true
+            }
+        })
+
+        cbx_fav_3.addEventListener('change', (e) => {
+            if (e.target.checked) {
+                // enable inputs
+                document.getElementById('formFile_favorito_3').disabled = false
+                document.getElementById('favorito_3_input_titulo').disabled = false
+                document.getElementById('favorito_3_input_descripcion').disabled = false
+                document.getElementById('favorito_3_input_precio').disabled = false
+            } else {
+                // disable inputs
+                document.getElementById('formFile_favorito_3').disabled = true
+                document.getElementById('favorito_3_input_titulo').disabled = true
+                document.getElementById('favorito_3_input_descripcion').disabled = true
+                document.getElementById('favorito_3_input_precio').disabled = true
+            }
+        })
+
+        cbx_fav_4.addEventListener('change', (e) => {
+            if (e.target.checked) {
+                // enable inputs
+                document.getElementById('formFile_favorito_4').disabled = false
+                document.getElementById('favorito_4_input_titulo').disabled = false
+                document.getElementById('favorito_4_input_descripcion').disabled = false
+                document.getElementById('favorito_4_input_precio').disabled = false
+            } else {
+                // disable inputs
+                document.getElementById('formFile_favorito_4').disabled = true
+                document.getElementById('favorito_4_input_titulo').disabled = true
+                document.getElementById('favorito_4_input_descripcion').disabled = true
+                document.getElementById('favorito_4_input_precio').disabled = true
+            }
+        })
 
 
+    </script>
+    <script src="js/formulario_favoritos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-
-
 </body>
-
 </html>

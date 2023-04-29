@@ -16,23 +16,39 @@
     <script src="js/filtro.js"></script>
 
     <title>Ropa</title>
+
+    <style>
+      .dropdown {
+        position: relative;
+        display: inline-block;
+        left: -120px;
+      }
+
+    </style>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-md navbar-dark bg-black">
-    <div class="container-fluid"> 
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+    <div class="container-fluid">
       <a class="navbar-brand" href="inicio.html">
         <i class="bi bi-gem"></i>
         <span class="text-info">ALL STYLE</span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#menu"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="menu">
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="#"></a>
+            <a class="nav-link" aria-current="page" href="#"></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="Marcas.html">MARCAS</a>
@@ -55,24 +71,67 @@
           <li class="nav-item">
             <a class="nav-link" href="accinicio.html">ACCESORIOS</a>
           </li>
-        
-          <li class="nav-item dropdown">
+        </ul>
+      </div>
+
+      <div class="btn-group dropdown d-none d-lg-flex align-items-center">
+        <span id="nombre_usuario" class="text-white">
+          <script>
+              const taxonomia =
+              localStorage.getItem("tipo_usuario") === "admin"
+                  ? "Administrador"
+                  : localStorage.getItem("usuario") || "Invitado";
+
+              document.getElementById("nombre_usuario").innerHTML = taxonomia;
+
+          </script>
+        </span>
+        <a
+          href="Login.html"
+          id="dropdownMenuButton"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+          class="dropdown-toggle btn-floating btn-sm text-white"
+          style="font-size: 25px"
+          ><i class="bi bi-person-circle"></i
+        ></a>
+
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <li>
+            <a class="dropdown-item d-block" id="btn-login" href="Login.html"
+              >Iniciar sesión</a
+            >
+          </li>
+          <li>
+            <a
+              class="dropdown-item d-block"
+              id="btn-login-administrador"
+              href="admin.inicio.html"
+              >Administrador</a
+            >
+          </li>
+          <li>
+            <a
+              class="dropdown-item d-none"
+              id="btn-administrar"
+              href="admin.html"
+              >Administrar</a
+            >
+          </li>
+          <li>
+            <a
+              class="dropdown-item d-none"
+              id="btn-usuario"
+              href="usuario.html"
+              >Editar perfil</a
+            >
+          </li>
+          <li>
+            <a class="dropdown-item d-none" href="#" id="btn-desconectar"
+              >Desconectar</a
+            >
           </li>
         </ul>
-          <hr class="d-md-none text-white-50">
-        <ul class="navbar-nav  flex-row flex-wrap text-light">
-          <li class="nav-item col-6 col-md-auto p-3">
-            <a href="carrito.html" class="btn-floating btn-sm text-white" style="font-size: 25px;"><i class="bi bi-bag-fill"></i></a>
-            <small class="d-md-none ms-2"></small>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <li class="nav-item col-6 col-md-auto p-3">
-          </i> <a href="Login.html" class="btn-floating btn-sm text-white" style="font-size: 25px;"><i
-                  class="bi bi-person-circle"></i></a>
-          <small class="d-md-none ms-2"></small>
-      </li>
-        </form>
       </div>
     </div>
   </nav>
@@ -413,6 +472,8 @@
       </div>
     </div>
 </footer>
+<script src="js/logout.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="js/jquery.js"></script>
 </body>

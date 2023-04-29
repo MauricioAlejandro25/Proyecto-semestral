@@ -1,0 +1,11 @@
+/* ------- ------ IMAGE DISPLAY ----- ----- */
+
+.imagen {
+	width: 120px;
+	height: 120px;
+	display: none;
+}
+
+.imagen-vista-previa {
+	display: block;
+}

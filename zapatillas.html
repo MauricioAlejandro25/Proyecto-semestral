@@ -1,416 +1,709 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/inicio.css">
-    <link rel="stylesheet" href="css/principales.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/inicio.css" />
+    <link rel="stylesheet" href="css/principales.css" />
 
     <script src="js/filtro.js"></script>
 
     <title>Zapatillas</title>
-</head>
 
-<body>
-  <nav class="navbar navbar-expand-md navbar-dark bg-black">
-    <div class="container-fluid"> 
-      <a class="navbar-brand" href="inicio.html">
-        <i class="bi bi-gem"></i>
-        <span class="text-info">ALL STYLE</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="menu">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="#"></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Marcas.html">MARCAS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="hombre.html">HOMBRE</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="mujeres.html">MUJER</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="niños.html">NIÑO</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="zapatillas.html">ZAPATILLAS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="ropa.html">ROPA</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="accinicio.html">ACCESORIOS</a>
-          </li>
-        
-          <li class="nav-item dropdown">
-          </li>
-        </ul>
-          <hr class="d-md-none text-white-50">
-        <ul class="navbar-nav  flex-row flex-wrap text-light">
-          <li class="nav-item col-6 col-md-auto p-3">
-            <a href="carrito.html" class="btn-floating btn-sm text-white" style="font-size: 25px;"><i class="bi bi-bag-fill"></i></a>
-            <small class="d-md-none ms-2"></small>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <li class="nav-item col-6 col-md-auto p-3">
-          </i> <a href="Login.html" class="btn-floating btn-sm text-white" style="font-size: 25px;"><i
-                  class="bi bi-person-circle"></i></a>
-          <small class="d-md-none ms-2"></small>
-      </li>
-        </form>
+    <style>
+      .dropdown {
+        position: relative;
+        display: inline-block;
+        left: -120px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="inicio.html">
+          <i class="bi bi-gem"></i>
+          <span class="text-info">ALL STYLE</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menu"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Marcas.html">MARCAS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="hombre.html">HOMBRE</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mujeres.html">MUJER</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="niños.html">NIÑO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="zapatillas.html">ZAPATILLAS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ropa.html">ROPA</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="accinicio.html">ACCESORIOS</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="btn-group dropdown d-none d-lg-flex align-items-center">
+          <span id="nombre_usuario" class="text-white">
+            <script>
+              const taxonomia =
+                localStorage.getItem("tipo_usuario") === "admin"
+                  ? "Administrador"
+                  : localStorage.getItem("usuario") || "Invitado";
+
+              document.getElementById("nombre_usuario").innerHTML = taxonomia;
+            </script>
+          </span>
+          <a
+            href="Login.html"
+            id="dropdownMenuButton"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            class="dropdown-toggle btn-floating btn-sm text-white"
+            style="font-size: 25px"
+            ><i class="bi bi-person-circle"></i
+          ></a>
+
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li>
+              <a class="dropdown-item d-block" id="btn-login" href="Login.html"
+                >Iniciar sesión</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item d-block"
+                id="btn-login-administrador"
+                href="admin.inicio.html"
+                >Administrador</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item d-none"
+                id="btn-administrar"
+                href="admin.html"
+                >Administrar</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item d-none"
+                id="btn-usuario"
+                href="usuario.html"
+                >Editar perfil</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item d-none" href="#" id="btn-desconectar"
+                >Desconectar</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-    
+    </nav>
 
-  <div class=".col-sm">
-        <h1>Zapatillas y ropa de hombre</h1>
-  </div>
-  
-  <div class="container">
-    <div class="category_list" >
+    <div class=".col-sm">
+      <h1>Zapatillas y ropa de hombre</h1>
+    </div>
+
+    <div class="container">
+      <div class="category_list">
         <div class="wrapper">
           <header>
-            <h2 style="text-align: center;">Filtro</h2>
+            <h2 style="text-align: center">Filtro</h2>
             <p>Use el control deslizante o ingrese el precio mínimo y máximo</p>
           </header>
           <div class="price-input">
             <div class="field">
               <span>Min</span>
-              <input type="number" class="input-min" value="2500">
+              <input type="number" class="input-min" value="2500" />
             </div>
             <div class="separator">-</div>
             <div class="field">
               <span>Max</span>
-              <input type="number" class="input-max" value="7500">
+              <input type="number" class="input-max" value="7500" />
             </div>
           </div>
           <div class="slider">
             <div class="progress"></div>
           </div>
           <div class="range-input">
-            <input type="range" class="range-min" min="0" max="10000" value="2500" step="100">
-            <input type="range" class="range-max" min="0" max="10000" value="7500" step="100">
+            <input
+              type="range"
+              class="range-min"
+              min="0"
+              max="10000"
+              value="2500"
+              step="100"
+            />
+            <input
+              type="range"
+              class="range-max"
+              min="0"
+              max="10000"
+              value="7500"
+              step="100"
+            />
           </div>
-          </div>
+        </div>
         <div class="wrapper">
           <div class="dropdown" data-control="checkbox-dropdown">
             <h5>SELECCIONE FILTRO:</h5>
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="false"
+                  aria-controls="collapseOne"
+                >
                   Género
                 </button>
               </h2>
-              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample" >
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample"
+              >
                 <div class="accordion-body">
                   <div class="dropdown-list">
                     <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 1" checked="checked"/>
+                      <input
+                        type="checkbox"
+                        name="dropdown-group"
+                        value="Selection 1"
+                        checked="checked"
+                      />
                       Hombre
                     </label>
-                    
+
                     <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 2" />
+                      <input
+                        type="checkbox"
+                        name="dropdown-group"
+                        value="Selection 2"
+                      />
                       Mujer
                     </label>
-                    
+
                     <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 3" />
+                      <input
+                        type="checkbox"
+                        name="dropdown-group"
+                        value="Selection 3"
+                      />
                       Niño
-                    </label>  
+                    </label>
                   </div>
                 </div>
               </div>
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
                   Categoría
                 </button>
               </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample" style="">
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample"
+                style=""
+              >
                 <div class="accordion-body">
                   <div class="dropdown-list">
                     <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 1" />
+                      <input
+                        type="checkbox"
+                        name="dropdown-group"
+                        value="Selection 1"
+                      />
                       Life style
                     </label>
-                    
+
                     <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 2" />
+                      <input
+                        type="checkbox"
+                        name="dropdown-group"
+                        value="Selection 2"
+                      />
                       Deportivo
-                    </label>    
+                    </label>
                   </div>
                 </div>
               </div>
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#headingThree" aria-expanded="false" aria-controls="headingThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#headingThree"
+                  aria-expanded="false"
+                  aria-controls="headingThree"
+                >
                   Marca
                 </button>
               </h2>
-              <div id="headingThree" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample" style="">
+              <div
+                id="headingThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample"
+                style=""
+              >
                 <div class="accordion-body">
                   <div class="dropdown-list">
                     <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 1" />
+                      <input
+                        type="checkbox"
+                        name="dropdown-group"
+                        value="Selection 1"
+                      />
                       Champion
                     </label>
-                    
+
                     <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 2" />
+                      <input
+                        type="checkbox"
+                        name="dropdown-group"
+                        value="Selection 2"
+                      />
                       Tommy hilfiger
                     </label>
-                    
+
                     <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 3" />
+                      <input
+                        type="checkbox"
+                        name="dropdown-group"
+                        value="Selection 3"
+                      />
                       Jordan
                     </label>
-                    
+
                     <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 4" />
+                      <input
+                        type="checkbox"
+                        name="dropdown-group"
+                        value="Selection 4"
+                      />
                       Adidas
                     </label>
-                    
+
                     <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 5" />
+                      <input
+                        type="checkbox"
+                        name="dropdown-group"
+                        value="Selection 5"
+                      />
                       Kappa
-                    </label>    
+                    </label>
                     <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 5" />
+                      <input
+                        type="checkbox"
+                        name="dropdown-group"
+                        value="Selection 5"
+                      />
                       Nike
-                    </label>  
+                    </label>
                     <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 5" />
+                      <input
+                        type="checkbox"
+                        name="dropdown-group"
+                        value="Selection 5"
+                      />
                       Reebok
-                    </label>    
+                    </label>
                     <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 5" />
+                      <input
+                        type="checkbox"
+                        name="dropdown-group"
+                        value="Selection 5"
+                      />
                       Converse
-                    </label>  
+                    </label>
                     <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 5" />
+                      <input
+                        type="checkbox"
+                        name="dropdown-group"
+                        value="Selection 5"
+                      />
                       Fila
-                    </label> 
+                    </label>
                     <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 5" />
+                      <input
+                        type="checkbox"
+                        name="dropdown-group"
+                        value="Selection 5"
+                      />
                       Vans
-                    </label>  
+                    </label>
                     <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 5" />
+                      <input
+                        type="checkbox"
+                        name="dropdown-group"
+                        value="Selection 5"
+                      />
                       New Balance
-                    </label>   
+                    </label>
                   </div>
                 </div>
               </div>
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#headingFour" aria-expanded="false" aria-controls="headingFour">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#headingFour"
+                  aria-expanded="false"
+                  aria-controls="headingFour"
+                >
                   Talla
                 </button>
               </h2>
-              <div id="headingFour" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample" style="">
+              <div
+                id="headingFour"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample"
+                style=""
+              >
                 <div class="accordion-body">
                   <div class="dropdown-list">
                     <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 1" />
+                      <input
+                        type="checkbox"
+                        name="dropdown-group"
+                        value="Selection 1"
+                      />
                       40 cl
                     </label>
-                    
+
                     <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 2" />
+                      <input
+                        type="checkbox"
+                        name="dropdown-group"
+                        value="Selection 2"
+                      />
                       41 cl
                     </label>
-                    
+
                     <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 3" />
+                      <input
+                        type="checkbox"
+                        name="dropdown-group"
+                        value="Selection 3"
+                      />
                       42 cl
                     </label>
-                    
+
                     <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 4" />
+                      <input
+                        type="checkbox"
+                        name="dropdown-group"
+                        value="Selection 4"
+                      />
                       43 cl
                     </label>
-                    
+
                     <label class="dropdown-option">
-                      <input type="checkbox" name="dropdown-group" value="Selection 5" />
+                      <input
+                        type="checkbox"
+                        name="dropdown-group"
+                        value="Selection 5"
+                      />
                       44 cl
-                    </label>      
+                    </label>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-    </div>
-    
-  <div class="products">
-    <div class="row"> 
-        <div class="col-md">
-          <div class="card">
-            <img class="card-img-top" src="img/CONVERSE CHUCK TAYLOR ALL STAR LIFT LEATHER BLANCO NA23.png">            
-            <div class="card-body">
-              <h4 class="card-title">CONVERSE CHUCK TAYLOR ALL STAR BLANCO NA23</h4>
-              <p class="card-text"> $72.990</p>
-              <a href="productos/producto_16.html" class="btn btn-primary">Entrar</a>
-              <a href="#" class="btn btn-primary">Agregar C</a>
-            </div>
-          </div>          
-        </div>
-        <div class="col-md">        
-          <div class="card">
-            <img class="card-img-top" src="img/ZAPATILLA VANS UA SK8-LOW UNISEX.png">            
-            <div class="card-body">
-              <h4 class="card-title">ZAPATILLA VANS UA SK8-LOW UNISEX</h4>
-              <p class="card-text">$64.990</p>
-              <a href="productos/producto_17.html" class="btn btn-primary">Entrar</a>
-              <a href="#" class="btn btn-primary">Agregar C</a>
-            </div>
-          </div>          
-        </div>
-        <div class="col-md">        
-          <div class="card">
-            <img class="card-img-top" src="img/REEBOK PUMP OMNI ZONE II JURASSIC PARK.png">            
-            <div class="card-body">
-              <h4 class="card-title">REEBOK PUMP OMNI ZONE II JURASSIC PARK</h4>
-              <p class="card-text">$90.990</p>
-              <a href="productos/producto_18.html" class="btn btn-primary">Entrar</a>
-              <a href="#" class="btn btn-primary">Agregar C</a>
-            </div>
-          </div>          
-        </div>
-        <div class="col-md">
-          <div class="card">
-            <img class="card-img-top" src="img/PUMA RS-X T3CH RIZE MORADO.png">            
-            <div class="card-body">
-              <h4 class="card-title">PUMA RS-X T3CH RIZE MORADO</h4>
-              <p class="card-text">$99.990</p>
-              <a href="productos/producto_19.html" class="btn btn-primary">Entrar</a>
-              <a href="#" class="btn btn-primary">Agregar C</a>
-            </div>
-          </div>          
-        </div>
-        <div class="col-md">
-          <div class="card">
-            <img class="card-img-top" src="img/ZAPATILLA ADIDAS FORUM HOMBRES.png">            
-            <div class="card-body">
-              <h4 class="card-title">ZAPATILLA ADIDAS FORUM HOMBRES</h4>
-              <p class="card-text">$104.990</p>
-              <a href="productos/producto_3.html" class="btn btn-primary">Entrar</a>
-              <a href="#" class="btn btn-primary">Agregar C</a>
-            </div>
-          </div>          
-        </div>
-        <div class="col-md">
-          <div class="card">
-            <img class="card-img-top" src="img/NIKE W AIR FORCE 1 07 NEXT NATURE.png">            
-            <div class="card-body">
-              <h4 class="card-title">NIKE W AIR FORCE 1 07 NEXT NATURE</h4>
-              <p class="card-text">$49.990</p>
-              <a href="productos/producto_6.html" class="btn btn-primary">Entrar</a>
-              <a href="#" class="btn btn-primary">Agregar C</a>
-            </div>
-          </div>          
-        </div> 
-    </div>  
-  </div>
-</div>
+      </div>
 
-    
-<footer class="bg-dark text-white pt-5 pb-4">
-    <div class="container text-center text-md-left">
-      <div class="row text-center text-md-left">
-        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-          <h5 class="text-uppercase md-4 font-weigth-bold text-info"> SOMOS ALL STYLE </h5>
-          <p>Allstyle es una tienda de ropa en línea que se especializa en moda para hombres y mujeres. 
-            Ofrece una amplia selección de prendas, desde ropa casual hasta ropa de noche y accesorios de moda. 
-            Además, ofrece envío gratuito en pedidos superiores a $250.000 y una política de devolución flexible. </p>
-        </div>
-        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-          <h5 class="text-uppercase  md-4 font-weigth-bold text-info">CATEGORIAS</h5>
-          <p>
-            <a href="#" class="text-white" style="text-decoration: none;">ZAPATILLAS</a>
-          </p>
-          <p>
-            <a href="#" class="text-white" style="text-decoration: none;">ROPA</a>
-          </p>
-          <p>
-            <a href="#" class="text-white" style="text-decoration: none;">ACCESORIOS</a>
-          </p>
-          <p>
-            <a href="#" class="text-white" style="text-decoration: none;">DEPORTES</a>
-          </p>
-        </div>
-        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-          <h5 class="text-uppercase md-4 font-weigth-bold text-info">AYUDA</h5>
-          <p>
-            <a href="#" class="text-white" style="text-decoration: none;">PREGUNTAS FRECUENTES</a>
-          </p>
-          <p>
-            <a href="#" class="text-white" style="text-decoration: none;">TÉRMINOS Y CONDICIONES</a>
-          </p>
-          <p>
-            <a href="#" class="text-white" style="text-decoration: none;">SEGUIMIENTO COMPRA</a>
-          </p>
-          <p>
-            <a href="#" class="text-white" style="text-decoration: none;">POLÍTICAS DE DEVOLUCIÓN</a>
-          </p>
-        </div>
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-          <h5 class="text-uppercase md-4 font-weigth-bold text-warning"></h5>
-          <p>
-            <i class="bi bi-house-fill mr-3"></i> Av. Andrés Bello 2425, Providencia, Región Metropolitana, Chile.
-          </p>
-          <p>
-            <i class="bi bi-telephone-fill mr-3"></i> 9 45898635
-          </p>
-        </div>
-        <hr class="mb-4">
-        <div class="row-aling-items-center">
-          <div class="col-md-7 col-lg-8 ">
-            <p>Copyright 2023 © ALL STYLE.
-              <a href="" style="text-decoration: none;">
-                <strong class="text-warning"></strong>
-              </a></p>
+      <div class="products">
+        <div class="row">
+          <div class="col-md">
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="img/CONVERSE CHUCK TAYLOR ALL STAR LIFT LEATHER BLANCO NA23.png"
+              />
+              <div class="card-body">
+                <h4 class="card-title">
+                  CONVERSE CHUCK TAYLOR ALL STAR BLANCO NA23
+                </h4>
+                <p class="card-text">$72.990</p>
+                <a href="productos/producto_16.html" class="btn btn-primary"
+                  >Entrar</a
+                >
+                <a href="#" class="btn btn-primary">Agregar C</a>
+              </div>
+            </div>
           </div>
-          <div class="col-md-5 col-lg-4">
-            <div class="text-center text-md-right">
-              <ul class="list-unstyled list-inline">
-                <li class="list-inline-item">
-                  <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-facebook"></i></a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-instagram"></i></a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-twitter"></i></a>
-                </li>
-              </ul>
+          <div class="col-md">
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="img/ZAPATILLA VANS UA SK8-LOW UNISEX.png"
+              />
+              <div class="card-body">
+                <h4 class="card-title">ZAPATILLA VANS UA SK8-LOW UNISEX</h4>
+                <p class="card-text">$64.990</p>
+                <a href="productos/producto_17.html" class="btn btn-primary"
+                  >Entrar</a
+                >
+                <a href="#" class="btn btn-primary">Agregar C</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="img/REEBOK PUMP OMNI ZONE II JURASSIC PARK.png"
+              />
+              <div class="card-body">
+                <h4 class="card-title">
+                  REEBOK PUMP OMNI ZONE II JURASSIC PARK
+                </h4>
+                <p class="card-text">$90.990</p>
+                <a href="productos/producto_18.html" class="btn btn-primary"
+                  >Entrar</a
+                >
+                <a href="#" class="btn btn-primary">Agregar C</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="img/PUMA RS-X T3CH RIZE MORADO.png"
+              />
+              <div class="card-body">
+                <h4 class="card-title">PUMA RS-X T3CH RIZE MORADO</h4>
+                <p class="card-text">$99.990</p>
+                <a href="productos/producto_19.html" class="btn btn-primary"
+                  >Entrar</a
+                >
+                <a href="#" class="btn btn-primary">Agregar C</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="img/ZAPATILLA ADIDAS FORUM HOMBRES.png"
+              />
+              <div class="card-body">
+                <h4 class="card-title">ZAPATILLA ADIDAS FORUM HOMBRES</h4>
+                <p class="card-text">$104.990</p>
+                <a href="productos/producto_3.html" class="btn btn-primary"
+                  >Entrar</a
+                >
+                <a href="#" class="btn btn-primary">Agregar C</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="img/NIKE W AIR FORCE 1 07 NEXT NATURE.png"
+              />
+              <div class="card-body">
+                <h4 class="card-title">NIKE W AIR FORCE 1 07 NEXT NATURE</h4>
+                <p class="card-text">$49.990</p>
+                <a href="productos/producto_6.html" class="btn btn-primary"
+                  >Entrar</a
+                >
+                <a href="#" class="btn btn-primary">Agregar C</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-</footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <footer class="bg-dark text-white pt-5 pb-4">
+      <div class="container text-center text-md-left">
+        <div class="row text-center text-md-left">
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5 class="text-uppercase md-4 font-weigth-bold text-info">
+              SOMOS ALL STYLE
+            </h5>
+            <p>
+              Allstyle es una tienda de ropa en línea que se especializa en moda
+              para hombres y mujeres. Ofrece una amplia selección de prendas,
+              desde ropa casual hasta ropa de noche y accesorios de moda.
+              Además, ofrece envío gratuito en pedidos superiores a $250.000 y
+              una política de devolución flexible.
+            </p>
+          </div>
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h5 class="text-uppercase md-4 font-weigth-bold text-info">
+              CATEGORIAS
+            </h5>
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none"
+                >ZAPATILLAS</a
+              >
+            </p>
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none"
+                >ROPA</a
+              >
+            </p>
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none"
+                >ACCESORIOS</a
+              >
+            </p>
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none"
+                >DEPORTES</a
+              >
+            </p>
+          </div>
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h5 class="text-uppercase md-4 font-weigth-bold text-info">
+              AYUDA
+            </h5>
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none"
+                >PREGUNTAS FRECUENTES</a
+              >
+            </p>
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none"
+                >TÉRMINOS Y CONDICIONES</a
+              >
+            </p>
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none"
+                >SEGUIMIENTO COMPRA</a
+              >
+            </p>
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none"
+                >POLÍTICAS DE DEVOLUCIÓN</a
+              >
+            </p>
+          </div>
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5 class="text-uppercase md-4 font-weigth-bold text-warning"></h5>
+            <p>
+              <i class="bi bi-house-fill mr-3"></i> Av. Andrés Bello 2425,
+              Providencia, Región Metropolitana, Chile.
+            </p>
+            <p><i class="bi bi-telephone-fill mr-3"></i> 9 45898635</p>
+          </div>
+          <hr class="mb-4" />
+          <div class="row-aling-items-center">
+            <div class="col-md-7 col-lg-8">
+              <p>
+                Copyright 2023 © ALL STYLE.
+                <a href="" style="text-decoration: none">
+                  <strong class="text-warning"></strong>
+                </a>
+              </p>
+            </div>
+            <div class="col-md-5 col-lg-4">
+              <div class="text-center text-md-right">
+                <ul class="list-unstyled list-inline">
+                  <li class="list-inline-item">
+                    <a
+                      href="#"
+                      class="btn-floating btn-sm text-white"
+                      style="font-size: 23px"
+                      ><i class="bi bi-facebook"></i
+                    ></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a
+                      href="#"
+                      class="btn-floating btn-sm text-white"
+                      style="font-size: 23px"
+                      ><i class="bi bi-instagram"></i
+                    ></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a
+                      href="#"
+                      class="btn-floating btn-sm text-white"
+                      style="font-size: 23px"
+                      ><i class="bi bi-twitter"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/logout.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
     <script src="js/jquery.js"></script>
-</body>
+  </body>
 </html>
