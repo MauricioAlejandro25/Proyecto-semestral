@@ -23,31 +23,4 @@
       ],
       "marca": "Adidas"
     },
-    "producto_4": {
-      "nombre": "CHAMPION LINEAR DAD ADJUSTABLE CAP",
-      "precio": 24990,
-      "genero": [
-        "Hombre"
-      ],
-      "marca": "Champion"
-    },
-    "producto_5": {
-      "nombre": "MOCHILA ADIDAS UNISEX ADULTO",
-      "precio": 39990,
-      "genero": [
-        "Hombre",
-        "Mujer",
-        "Niño"
-      ],
-      "marca": "Adidas"
-    },
-    "producto_6": {
-      "nombre": "TOMMY JEANS TJW BEST SWEAT PANT",
-      "precio": 56990,
-      "genero": [
-        "Hombre",
-        "Mujer"
-      ],
-      "marca": "Tommy hilfiger"
-    }
   }
