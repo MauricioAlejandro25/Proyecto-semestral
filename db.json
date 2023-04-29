@@ -82,19 +82,4 @@
       "marca": "Adidas",
       "tallas": null
     },
-    "producto_6": {
-      "nombre": "TOMMY JEANS TJW BEST SWEAT PANT",
-      "precio": 56990,
-      "descripcion": "TOMMY JEANS PANTALON PUÑO",
-      "colores": [
-         "Beige"
-      ],
-      "genero": [
-        "Hombre",
-        "Mujer"
-      ],
-      "categoria": "Deportivo",
-      "marca": "Tommy hilfiger",
-      "tallas": null
-    }
   }
