@@ -58,3 +58,13 @@ window.onload = () => {
     filterProduct("Todo");
 };
 
+//funcion para eliminar productos de el carrito
+function eliminarFila(button) {
+    // Obtener la fila que contiene el botón de eliminación
+    var fila = button.parentNode.parentNode;
+    // Obtener la tabla a la que pertenece la fila
+    var tabla = fila.parentNode;
+    // Eliminar la fila de la tabla
+    tabla.removeChild(fila);
+}
+
