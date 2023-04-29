@@ -2,84 +2,58 @@
     "producto_1": {
       "nombre": "NIKE W AIR FORCE 1 07 NEXT NATURE",
       "precio": 129000,
-      "descripcion": "Estas zapatillas son una combinación perfecta de estilo y comodidad. Su exterior está fabricado con materiales resistentes y de alta calidad, lo que las convierte en una opción duradera y resistente al desgaste diario. Además, su diseño moderno y elegante las convierte en un complemento ideal para cualquier atuendo casual.",
-      "colores": [
-        "blanco",
-        "negro"
-      ],
       "genero": [
         "Mujer"
       ],
       "categoria": "Estilo de vida",
-      "marca": "Nike",
-      "tallas": [
-        38,
-        39,
-        40,
-        41,
-        42
-      ]
+      "marca": "Nike"
     },
     "producto_2": {
       "nombre": "JORDAN KIDS POLERA ALGODON JORDAN NIÑO",
       "precio": 21990,
-      "descripcion": "Jordan es una marca premium de ropa y accesorios inspirada en el legado dinmico la visin y la participacin directa de Michael Jordan. La marca Jordan hizo su debut en 1997 y se ha convertido en una coleccin completa de productos deportivos y de lifestyle de primera calidad.",
-      "colores": null,
       "genero": [
         "Niño"
       ],
       "categoria": "Estilo de vida",
-      "marca": "Jordan",
-      "tallas": [
-        10,
-        12,
-        14
-      ]
+      "marca": "Jordan"
     },
     "producto_3": {
       "nombre": "POLERA ALGODON ADIDAS MUJER",
       "precio": 39990,
-      "descripcion": "La comodidad es la clave. Ese es el lema de esta camiseta adidas que luce un corte holgado e informal y un tejido de algodón supersuave. El confort y el estilo van siempre de la mano cuando la llevas puesta.",
-      "colores": [
-        "blanco",
-        "negro",
-        "rosa"
-      ],
       "genero": [
         "Mujer"
       ],
       "categoria": "Deportivo",
-      "marca": "Adidas",
-      "tallas": [
-        "XS",
-        "S",
-        "M"
-      ]
+      "marca": "Adidas"
     },
     "producto_4": {
       "nombre": "CHAMPION LINEAR DAD ADJUSTABLE CAP",
       "precio": 24990,
-      "descripcion": "CHAMPION LINEAR DAD ADJUSTABLE CAP",
-      "colores": null,
       "genero": [
         "Hombre"
       ],
       "categoria": "Deportivo",
-      "marca": "Champion",
-      "tallas": null
+      "marca": "Champion"
     },
     "producto_5": {
       "nombre": "MOCHILA ADIDAS UNISEX ADULTO",
       "precio": 39990,
-      "descripcion": "Esta mochila se ha confeccionado en tejido ripstop y luce un estampado de camuflaje en todo el diseño. El bolsillo frontal con cremallera te permite acceder rápidamente a tus pertenencias, mientras que las correas ajustables y moldeadas para los hombros te ayudan a transportar la carga cómodamente.",
-      "colores": null,
       "genero": [
         "Hombre",
         "Mujer",
         "Niño"
       ],
       "categoria": "Deportivo",
-      "marca": "Adidas",
-      "tallas": null
+      "marca": "Adidas"
     },
+    "producto_6": {
+      "nombre": "TOMMY JEANS TJW BEST SWEAT PANT",
+      "precio": 56990,
+      "genero": [
+        "Hombre",
+        "Mujer"
+      ],
+      "categoria": "Deportivo",
+      "marca": "Tommy hilfiger"
+    }
   }
