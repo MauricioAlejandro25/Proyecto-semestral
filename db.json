@@ -6,7 +6,6 @@
         "Mujer"
       ],
       "marca": "Nike",
-      "src": "JORDAN KIDS POLERA ALGODON JORDAN NIÑO.png"
     },
     "producto_2": {
       "nombre": "JORDAN KIDS POLERA ALGODON JORDAN NIÑO",
@@ -14,7 +13,8 @@
       "genero": [
         "Niño"
       ],
-      "marca": "Jordan"
+      "marca": "Jordan",
+       "src": "img/JORDAN KIDS POLERA ALGODON JORDAN NIÑO.png"
     },
     "producto_3": {
       "nombre": "POLERA ALGODON ADIDAS MUJER",
