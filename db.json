@@ -13,7 +13,8 @@
          37.5,
          39,
          40
-      ]
+      ],
+      "href": "productos/producto_6.html"
     },
     "producto_2": {
       "nombre": "JORDAN KIDS POLERA ALGODON JORDAN NIÑO",
@@ -27,7 +28,8 @@
         10,
         12,
         14
-      ]
+      ],
+      "href": "productos/producto_14.html"
     },
     "producto_3": {
       "nombre": "POLERA ALGODON ADIDAS MUJER",
@@ -43,7 +45,8 @@
         "M",
         "L",
         "XL"
-      ]
+      ],
+      "href": "productos/producto_9.html"
     },
     "producto_4": {
       "nombre": "CHAMPION LINEAR DAD ADJUSTABLE CAP",
@@ -53,6 +56,7 @@
       ],
       "marca": "Champion",
       "src": "img/CHAMPION LINEAR DAD ADJUSTABLE CAP.png",
-      "tallas": []
+      "tallas": [],
+       "href": "productos/producto_29.html"
     }
 }
