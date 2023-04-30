@@ -5,7 +5,15 @@
       "genero": [
         "Mujer"
       ],
-      "marca": "Nike"
+      "marca": "Nike",
+      "src": "img/NIKE W AIR FORCE 1 07 NEXT NATURE.png",
+      "tallas": [
+         36,
+         37,
+         37.5,
+         39,
+         40
+      ]
     },
     "producto_2": {
       "nombre": "JORDAN KIDS POLERA ALGODON JORDAN NIÑO",
@@ -14,7 +22,12 @@
         "Niño"
       ],
       "marca": "Jordan",
-       "src": "img/JORDAN KIDS POLERA ALGODON JORDAN NIÑO.png"
+      "src": "img/JORDAN KIDS POLERA ALGODON JORDAN NIÑO.png",
+      "tallas": [
+        10,
+        12,
+        14
+      ]
     },
     "producto_3": {
       "nombre": "POLERA ALGODON ADIDAS MUJER",
@@ -22,7 +35,15 @@
       "genero": [
         "Mujer"
       ],
-      "marca": "Adidas"
+      "marca": "Adidas",
+      "src": "img/POLERA ALGODON ADIDAS MUJER.png",
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+      ]
     },
     "producto_4": {
       "nombre": "CHAMPION LINEAR DAD ADJUSTABLE CAP",
@@ -30,6 +51,8 @@
       "genero": [
         "Hombre"
       ],
-      "marca": "Champion"
+      "marca": "Champion",
+      "src": "img/CHAMPION LINEAR DAD ADJUSTABLE CAP.png",
+      "tallas": []
     }
 }
