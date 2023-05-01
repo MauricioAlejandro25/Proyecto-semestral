@@ -1,0 +1,62 @@
+{
+    "producto_1": {
+      "nombre": "NIKE W AIR FORCE 1 07 NEXT NATURE",
+      "precio": 129000,
+      "genero": [
+        "Mujer"
+      ],
+      "marca": "Nike",
+      "src": "img/NIKE W AIR FORCE 1 07 NEXT NATURE.png",
+      "tallas": [
+         36,
+         37,
+         37.5,
+         39,
+         40
+      ],
+      "href": "productos/producto_6.html"
+    },
+    "producto_2": {
+      "nombre": "JORDAN KIDS POLERA ALGODON JORDAN NIÑO",
+      "precio": 21990,
+      "genero": [
+        "Niño"
+      ],
+      "marca": "Jordan",
+      "src": "img/JORDAN KIDS POLERA ALGODON JORDAN NIÑO.png",
+      "tallas": [
+        10,
+        12,
+        14
+      ],
+      "href": "productos/producto_14.html"
+    },
+    "producto_3": {
+      "nombre": "POLERA ALGODON ADIDAS MUJER",
+      "precio": 39990,
+      "genero": [
+        "Mujer"
+      ],
+      "marca": "Adidas",
+      "src": "img/POLERA ALGODON ADIDAS MUJER.png",
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "href": "productos/producto_9.html"
+    },
+    "producto_4": {
+      "nombre": "CHAMPION LINEAR DAD ADJUSTABLE CAP",
+      "precio": 24990,
+      "genero": [
+        "Hombre"
+      ],
+      "marca": "Champion",
+      "src": "img/CHAMPION LINEAR DAD ADJUSTABLE CAP.png",
+      "tallas": [],
+       "href": "productos/producto_29.html"
+    }
+}
