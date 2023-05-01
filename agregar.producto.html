@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+    />
+    <title>Agregar producto</title>
+    <link rel="stylesheet" href="css/inicio.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </head>
+  <body class="bg-grey">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="admin.html">
+          <i class="bi bi-gem"></i>
+          <span class="text-info">PANEL DE ADMINISTRACIÓN</span>
+        </a>
+      </div>
+    </nav>
+
+    <div class="py-5">
+      <div class="container">
+        <div class="d-flex justify-content-between mb-5">
+          <h2 class="text-white fw-bold">NUEVO PRODUCTO</h2>
+        </div>
+
+        <form action="" id="formulario-nuevo-producto">
+          <div class="row">
+            <div class="col-12 col-lg-3">
+              <div class="formulario__grupo" id="grupo__usuario">
+                <label for="nombre" class="formulario__label text-white fw-bold"
+                  >Nombre</label
+                >
+                <input
+                  type="text"
+                  class="form-control mt-2"
+                  name="nombre"
+                  id="nombre"
+                />
+                <div class="invalid-feedback">Debes agregar el nombre</div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-3">
+              <div class="formulario__grupo" id="grupo__usuario">
+                <label for="marca" class="formulario__label text-white fw-bold"
+                  >Marca</label
+                >
+                <select
+                  id="marca"
+                  name="marca"
+                  class="form-select mt-2"
+                  aria-label="Default select example"
+                >
+                  <option disabled selected value="0">Seleccione una marca</option>
+                  <option value="1">Adidas</option>
+                  <option value="2">Puma</option>
+                  <option value="3">Jordan</option>
+                  <option value="4">Nike</option>
+                  <option value="5">Vans</option>
+                  <option value="6">Tommy Hilfilger</option>
+                  <option value="7">Champion</option>
+                </select>
+                <div class="invalid-feedback">Debe indicar la marca</div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-3">
+              <div class="formulario__grupo" id="grupo__usuario">
+                <label for="genero" class="formulario__label text-white fw-bold"
+                  >Género</label
+                >
+                <select
+                  id="genero"
+                  name="genero"
+                  class="form-select mt-2"
+                  aria-label="Default select example"
+                >
+                  <option disabled selected value="0">Seleccione un género</option>
+                  <option value="1">Mujer</option>
+                  <option value="2">Hombre</option>
+                  <option value="3">Niño</option>
+                </select>
+                <div class="invalid-feedback">Debe indicar el género</div>
+              </div>
+            </div>
+
+            <div class="mt-5 col-12 col-lg-6">
+              <div class="formulario__grupo" id="grupo__usuario">
+                <label for="genero" class="formulario__label text-white fw-bold mb-2"
+                  >Descripción</label
+                >
+
+                <textarea
+                  class="form-control"
+                  aria-label="With textarea"
+                  placeholder="Opcional"
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="mt-5 col-12 col-lg-6">
+                <div class="formulario__grupo" id="grupo__usuario">
+                    <label for="genero" class="formulario__label text-white fw-bold mb-2"
+                    >Imagen</label
+                  >
+                  <div class="input-group mb-3">
+                    <input type="file" class="form-control" id="inputGroupFile02">
+                    <label class="input-group-text" for="inputGroupFile02">Subir</label>
+                  </div>
+                </div>
+            </div>
+
+            <div class="mt-5 col-12 col-lg-2">
+                <div class="formulario__grupo" id="grupo__usuario">
+                    <label for="genero" class="formulario__label text-white fw-bold mb-2"
+                    >Precio</label
+                  >
+                  <input
+                  type="text"
+                  class="form-control mt-2"
+                  name="precio"
+                  id="precio"
+                />
+                <div class="invalid-feedback">- El precio no puede contener puntos, guíones y/o comas</div>
+                <div class="invalid-feedback">- El precio debe ser mayor a 0 y menor a 1000000</div>
+                </div>
+            </div>
+          </div>
+
+          <div class="mt-5">
+            <button class="btn btn-success">Agregar producto</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+        const formulario_login = document.getElementById('formulario-nuevo-producto');
+
+        const inputs = document.querySelectorAll('#formulario-nuevo-producto input');
+
+        const selects = document.querySelectorAll('#formulario-nuevo-producto select');
+
+        const reglas = {
+            nombre: /^[a-zA-ZÀ-ÿ0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?\s]{1,40}$/,
+            // precio solo numeros, sin guion, puntos y/o comas
+            precio: /^(?!0)\d{1,6}$|^1000000$/,
+            marca: null,
+            genero: null,
+        }
+
+        const campos = {
+            nombre: false,
+            marca: false,
+            genero: false,
+            precio: false
+        }
+
+        const validarFormulario = (e) => {
+            switch (e.target.name) {
+                case "nombre":
+                    validarCampo(reglas.nombre, e.target, 'nombre');
+                    break;
+                case "marca":
+                    validarSelect(e.target, 'marca');
+                    break;
+                case "genero":
+                    validarSelect(e.target, 'genero');
+                    break;
+                case "precio":
+                    validarCampo(reglas.precio, e.target, 'precio');
+                    break;
+            }
+        }
+
+        const validarCampo = (regla, input, campo) => {
+            if (regla.test(input.value)) {
+                document.getElementById(campo).classList.remove('is-invalid');
+                document.getElementById(campo).classList.add('is-valid');
+                campos[campo] = true;
+            } else {
+                document.getElementById(campo).classList.add('is-invalid');
+                document.getElementById(campo).classList.remove('is-valid');
+                campos[campo] = false;
+            }
+        }
+
+        const validarSelect = (input, campo) => {
+            if (input.value != 0) {
+                document.getElementById(campo).classList.remove('is-invalid');
+                document.getElementById(campo).classList.add('is-valid');
+                campos[campo] = true;
+            } else {
+                document.getElementById(campo).classList.add('is-invalid');
+                document.getElementById(campo).classList.remove('is-valid');
+                campos[campo] = false;
+            }
+        }
+
+        inputs.forEach((input) => {
+            input.addEventListener('keyup', validarFormulario);
+            input.addEventListener('blur', validarFormulario);
+        });
+
+        selects.forEach((select) => {
+            select.addEventListener('change', validarFormulario);
+            select.addEventListener('click', validarFormulario);
+        });
+    </script>
+  </body>
+</html>

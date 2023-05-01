@@ -25,6 +25,12 @@
         display: inline-block;
         left: -120px;
       }
+
+      .carrito {
+        position: relative;
+        display: inline-block;
+        left: -40px;
+      }
     </style>
   </head>
 
@@ -55,7 +61,7 @@
               <a class="nav-link" href="Marcas.html">MARCAS</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="hombre.html">HOMBRE</a>
+              <a class="nav-link" href="catalogo.html">CATÁLOGO</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="mujeres.html">MUJER</a>
@@ -76,15 +82,28 @@
         </div>
 
         <div class="btn-group dropdown d-none d-lg-flex align-items-center">
+
+          <a href="carrito.html" class="carrito btn btn-outline-info">
+            <i class="bi bi-cart4"></i>
+            <span id="cantidad-productos">
+              <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                  document.getElementById(
+                    "cantidad-productos"
+                  ).innerHTML = cantidadProductos() || 0;
+                })
+              </script>
+            </span>
+          </a>
+
           <span id="nombre_usuario" class="text-white">
             <script>
-                const taxonomia =
+              const taxonomia =
                 localStorage.getItem("tipo_usuario") === "admin"
-                    ? "Administrador"
-                    : localStorage.getItem("usuario") || "Invitado";
-  
-                document.getElementById("nombre_usuario").innerHTML = taxonomia;
+                  ? "Administrador"
+                  : localStorage.getItem("usuario") || "Invitado";
 
+              document.getElementById("nombre_usuario").innerHTML = taxonomia;
             </script>
           </span>
           <a
@@ -596,10 +615,11 @@
     </footer>
 
     <script>
-        const _btn_administrar = document.getElementById("btn-administrar");    
-        _btn_administrar.classList.add("d-none");
+      const _btn_administrar = document.getElementById("btn-administrar");
+      _btn_administrar.classList.add("d-none");
     </script>
 
+    <script src="js/carrito.js"></script>
     <script src="js/logout.js"></script>
     <script src="js/favoritos.js"></script>
     <script type="text/javascript" src="js/accesorios.js"></script>

@@ -18,9 +18,8 @@
     />
     <link rel="stylesheet" href="css/inicio.css" />
     <link rel="stylesheet" href="css/principales.css" />
-
-    <title>Accesorios</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="js/filtro.js"></script>
+    <title>HOMBRE</title>
     <style>
       .dropdown {
         position: relative;
@@ -34,145 +33,26 @@
         left: -40px;
       }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   </head>
-
   <body>
-    <script>
-      const accesorios = [
-        {
-          id: 1,
-          nombre: "PUMA PRIME DAD CAP",
-          precio: 12990,
-          img: "img/PUMA PRIME DAD CAP.png",
-          marca: "Puma",
-          genero: ['Hombre'],
-          href: "productos/producto_30.html",
-        },
-        {
-          id: 2,
-          nombre: "ACCESORIO NIKE NO SHOW SOCK",
-          precio: 14990,
-          img: "img/ACCESORIO NIKE NO SHOW SOCK.png",
-          marca: "Nike",
-          genero: ['Hombre', 'Mujer'],
-          href: "productos/producto_21.html",
-        },
-        {
-          id: 3,
-          nombre: "NO SHOW SOCK NIKE U NK EVERYDAY LTWT NS 3PR",
-          precio: 14990,
-          img: "img/NO SHOW SOCK NIKE U NK EVERYDAY LTWT NS 3PR.png",
-          marca: "Nike",
-          genero: ['Hombre', 'Mujer'],
-          href: "productos/producto_22.html",
-        },
-        {
-          id: 4,
-          nombre: "CHAMPION LINEAR DAD ADJUSTABLE CAP",
-          precio: 24990,
-          img: "img/CHAMPION LINEAR DAD ADJUSTABLE CAP.png",
-          marca: "Champion",
-          genero: ['Hombre'],
-          href: "productos/producto_29.html",
-        },
-        {
-          id: 5,
-          nombre: "NIKE BACKPACK BLACK-BLACK-WHITE",
-          precio: 49990,
-          img: "img/NIKE BACKPACK BLACK-BLACK-WHITE.png",
-          marca: "Nike",
-          genero: ['Hombre', 'Mujer'],
-          href: "productos/producto_24.html",
-        },
-        {
-          id: 6,
-          nombre: "JORDAN KIDS BANANO CROSSBODY BAG MULTICOLOR",
-          precio: 27490,
-          img: "img/JORDAN KIDS BANANO CROSSBODY BAG MULTICOLOR.png",
-          marca: "Jordan",
-          genero: ['Niño'],
-          href: "productos/producto_27.html",
-        },
-        {
-          id: 7,
-          nombre: "NK HERITAGE BKPK - NIKE AOP BTS22",
-          precio: 94990,
-          img: "img/NK HERITAGE BKPK - NIKE AOP BTS22.png",
-          marca: "Nike",
-          genero: ['Hombre'],
-          href: "productos/producto_25.html",
-        },
-        {
-          id: 8,
-          nombre: "MOCHILA ADIDAS UNISEX ADULTO",
-          precio: 39990,
-          img: "img/MOCHILA ADIDAS UNISEX ADULTO.png",
-          marca: "Adidas",
-          genero: ['Hombre', 'Mujer'],
-          href: "productos/producto_28.html",
-        },
-        {
-          id: 9,
-          nombre: "TOMMY JEANS TJW ESSENTIAL BUMBAG",
-          precio: 29990,
-          img: "img/TOMMY JEANS TJW ESSENTIAL BUMBAG.png",
-          marca: "Tommy Hilfiger",
-          genero: ['Mujer'],
-          href: "productos/producto_26.html",
-        },
-      ];
-
+    <script type="text/javascript">
+      
       $(document).ready(function () {
-        //agregamos evento click al botón
-        //ejecuto metodo get con la url del api rest
-        //Guardo el JSON en la variable data
-
-        //recorro el json mediante el ciclo each
-        //guardo cada elemento de la lista en la variable item
-        $.each(accesorios, function (i, item) {
-          //muestro los datos en la tabla
-          $("#productos").append(
-            "<div class='col-lg-3'>" +
-              "<div class='p-4'>" +
-              "<img src='" +
-              item.img +
-              "' class='card-img-top' alt='...'>" +
-              "<h6 class='mb-4' style='height: 50px;'>" +
-              item.nombre +
-              "</h6>" +
-              "<h5>" +
-              item.precio.toLocaleString("es-ES", {
-                style: "currency",
-                currency: "CLP",
-              }) +
-              "</h5>" +
-              "<a href='" +
-              item.href +
-              "' class='btn btn-primary d-flex justify-content-center mt-5'>Ver producto</a>" +
-              "</div>" +
-              "</div>"
-          );
-        });
-
-        $("#range-min, #range-max").change(function () {
-          let precio_min = $("#range-min").val();
-          let precio_max = $("#range-max").val();
-
-          $("#productos").empty();
-
-          //recorro el json mediante el ciclo each
-          //guardo cada elemento de la lista en la variable item
-          $.each(
-            accesorios.filter(
-              (item) => item.precio > precio_min && item.precio < precio_max
-            ),
-            function (i, item) {
+        // https://my-json-server.typicode.com/
+        // MY JSON SERVER FAKE API
+        $.get(
+          "https://my-json-server.typicode.com/MauricioAlejandro25/Proyecto-semestral/db",
+          function (data) {
+            //recorro el json mediante el ciclo each
+            //guardo cada elemento de la lista en la variable item
+            $.each(data, function (i, item) {
               //muestro los datos en la tabla
               $("#productos").append(
                 "<div class='col-lg-3'>" +
-                  "<div class='p-4' style='width: 100%;'>" +
+                  "<div class='p-4'>" +
                   "<img src='" +
-                  item.img +
+                  item.src +
                   "' class='card-img-top' alt='...'>" +
                   "<h6 class='mb-4' style='height: 50px;'>" +
                   item.nombre +
@@ -188,6 +68,50 @@
                   "' class='btn btn-primary d-flex justify-content-center mt-5'>Ver producto</a>" +
                   "</div>" +
                   "</div>"
+              );
+            });
+          }
+        );
+
+        $("#range-min, #range-max").change(function () {
+          let precio_min = $("#range-min").val();
+          let precio_max = $("#range-max").val();
+
+          $("#productos").empty();
+
+          $.get(
+            "https://my-json-server.typicode.com/MauricioAlejandro25/Proyecto-semestral/db",
+            function (data) {
+              //recorro el json mediante el ciclo each
+              //guardo cada elemento de la lista en la variable item
+              $.each(
+                Object.values(data).filter(
+                  (item) => item.precio > precio_min && item.precio < precio_max
+                ),
+                function (i, item) {
+                  //muestro los datos en la tabla
+                  $("#productos").append(
+                    "<div class='col-lg-3'>" +
+                      "<div class='p-4' style='width: 100%;'>" +
+                      "<img src='" +
+                      item.src +
+                      "' class='card-img-top' alt='...'>" +
+                      "<h6 class='mb-4' style='height: 50px;'>" +
+                      item.nombre +
+                      "</h6>" +
+                      "<h5>" +
+                      item.precio.toLocaleString("es-ES", {
+                        style: "currency",
+                        currency: "CLP",
+                      }) +
+                      "</h5>" +
+                      "<a href='" +
+                      item.href +
+                      "' class='btn btn-primary d-flex justify-content-center mt-5'>Ver producto</a>" +
+                      "</div>" +
+                      "</div>"
+                  );
+                }
               );
             }
           );
@@ -200,42 +124,47 @@
 
           $("#productos").empty();
 
-          //recorro el json mediante el ciclo each
-          //guardo cada elemento de la lista en la variable item
-          $.each(
-            accesorios.filter((item) => {
-              if (hombre && item.genero.includes("Hombre")) {
-                return true;
-              } else if (mujer && item.genero.includes("Mujer")) {
-                return true;
-              } else if (nino && item.genero.includes("Niño")) {
-                return true;
-              } else if (!hombre && !mujer && !nino) {
-                return true;
-              } else return false;
-            }),
-            function (i, item) {
-              //muestro los datos en la tabla
-              $("#productos").append(
-                "<div class='col-lg-3'>" +
-                  "<div class='p-4'>" +
-                  "<img src='" +
-                  item.img +
-                  "' class='card-img-top' alt='...'>" +
-                  "<h6 class='mb-4' style='height: 50px;'>" +
-                  item.nombre +
-                  "</h6>" +
-                  "<h5>" +
-                  item.precio.toLocaleString("es-ES", {
-                    style: "currency",
-                    currency: "CLP",
-                  }) +
-                  "</h5>" +
-                  "<a href='" +
-                  item.href +
-                  "' class='btn btn-primary d-flex justify-content-center mt-5'>Ver producto</a>" +
-                  "</div>" +
-                  "</div>"
+          $.get(
+            "https://my-json-server.typicode.com/MauricioAlejandro25/Proyecto-semestral/db",
+            function (data) {
+              //recorro el json mediante el ciclo each
+              //guardo cada elemento de la lista en la variable item
+              $.each(
+                Object.values(data).filter((item) => {
+                  if (hombre && item.genero.includes("Hombre")) {
+                    return true;
+                  } else if (mujer && item.genero.includes("Mujer")) {
+                    return true;
+                  } else if (nino && item.genero.includes("Niño")) {
+                    return true;
+                  } else if (!hombre && !mujer && !nino) {
+                    return true;
+                  } else return false;
+                }),
+                function (i, item) {
+                  //muestro los datos en la tabla
+                  $("#productos").append(
+                    "<div class='col-lg-3'>" +
+                      "<div class='p-4'>" +
+                      "<img src='" +
+                      item.src +
+                      "' class='card-img-top' alt='...'>" +
+                      "<h6 class='mb-4' style='height: 50px;'>" +
+                      item.nombre +
+                      "</h6>" +
+                      "<h5>" +
+                      item.precio.toLocaleString("es-ES", {
+                        style: "currency",
+                        currency: "CLP",
+                      }) +
+                      "</h5>" +
+                      "<a href='" +
+                      item.href +
+                      "' class='btn btn-primary d-flex justify-content-center mt-5'>Ver producto</a>" +
+                      "</div>" +
+                      "</div>"
+                  );
+                }
               );
             }
           );
@@ -246,54 +175,52 @@
           let nike = $("#nike").is(":checked");
           let jordan = $("#jordan").is(":checked");
           let champion = $("#champion").is(":checked");
-          let puma = $("#puma").is(":checked");
-          let tommy_hilfiger = $("#tommy-hilfiger").is(":checked");
 
           $("#productos").empty();
 
-          //recorro el json mediante el ciclo each
-          //guardo cada elemento de la lista en la variable item
-          $.each(
-            accesorios.filter((item) => {
-              if (adidas && item.marca.includes("Adidas")) {
-                return true;
-              } else if (nike && item.marca.includes("Nike")) {
-                return true;
-              } else if (jordan && item.marca.includes("Jordan")) {
-                return true;
-              } else if (champion && item.marca.includes("Champion")) {
-                return true;
-              } else if (puma && item.marca.includes("Puma")) {
-                return true;
-              } else if (tommy_hilfiger && item.marca.includes("Tommy Hilfiger")) {
-                return true;
-              }
-              else if (!adidas && !nike && !jordan && !champion && !puma && !tommy_hilfiger) {
-                return true;
-              } else return false;
-            }),
-            function (i, item) {
-              //muestro los datos en la tabla
-              $("#productos").append(
-                "<div class='col-lg-3'>" +
-                  "<div class='p-4'>" +
-                  "<img src='" +
-                  item.img +
-                  "' class='card-img-top' alt='...'>" +
-                  "<h6 class='mb-4' style='height: 50px;'>" +
-                  item.nombre +
-                  "</h6>" +
-                  "<h5>" +
-                  item.precio.toLocaleString("es-ES", {
-                    style: "currency",
-                    currency: "CLP",
-                  }) +
-                  "</h5>" +
-                  "<a href='" +
-                  item.href +
-                  "' class='btn btn-primary d-flex justify-content-center mt-5'>Ver producto</a>" +
-                  "</div>" +
-                  "</div>"
+          $.get(
+            "https://my-json-server.typicode.com/MauricioAlejandro25/Proyecto-semestral/db",
+            function (data) {
+              //recorro el json mediante el ciclo each
+              //guardo cada elemento de la lista en la variable item
+              $.each(
+                Object.values(data).filter((item) => {
+                  if (adidas && item.marca.includes("Adidas")) {
+                    return true;
+                  } else if (nike && item.marca.includes("Nike")) {
+                    return true;
+                  } else if (jordan && item.marca.includes("Jordan")) {
+                    return true;
+                  } else if (champion && item.marca.includes("Champion")) {
+                    return true;
+                  } else if (!adidas && !nike && !jordan && !champion) {
+                    return true;
+                  } else return false;
+                }),
+                function (i, item) {
+                  //muestro los datos en la tabla
+                  $("#productos").append(
+                    "<div class='col-lg-3'>" +
+                      "<div class='p-4'>" +
+                      "<img src='" +
+                      item.src +
+                      "' class='card-img-top' alt='...'>" +
+                      "<h6 class='mb-4' style='height: 50px;'>" +
+                      item.nombre +
+                      "</h6>" +
+                      "<h5>" +
+                      item.precio.toLocaleString("es-ES", {
+                        style: "currency",
+                        currency: "CLP",
+                      }) +
+                      "</h5>" +
+                      "<a href='" +
+                      item.href +
+                      "' class='btn btn-primary d-flex justify-content-center mt-5'>Ver producto</a>" +
+                      "</div>" +
+                      "</div>"
+                  );
+                }
               );
             }
           );
@@ -421,9 +348,8 @@
     </nav>
 
     <div class="py-5">
-      <h1 class="fw-bold">ACCESORIOS</h1>
+      <h1 class="fw-bold">NUESTROS PRODUCTOS</h1>
     </div>
-
     <div class="row px-2">
       <!-- FILTROS -->
       <div class="col-12 col-lg-3 px-0 mx-0">
@@ -538,6 +464,8 @@
                 </div>
               </div>
             </div>
+
+            <!-- MARCAS -->
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button
@@ -603,30 +531,11 @@
                     <label class="btn btn-outline-primary" for="champion"
                       >Champion</label
                     >
-
-                    <input
-                      type="checkbox"
-                      class="btn-check"
-                      id="puma"
-                      autocomplete="off"
-                    />
-                    <label class="btn btn-outline-primary" for="puma"
-                      >Puma</label
-                    >
-
-                    <input
-                      type="checkbox"
-                      class="btn-check"
-                      id="tommy-hilfiger"
-                      autocomplete="off"
-                    />
-                    <label class="btn btn-outline-primary" for="tommy-hilfiger"
-                      >Tommy Hilfiger</label
-                    >
                   </div>
                 </div>
               </div>
             </div>
+            <!-- MARCAS -->
           </div>
           <!-- GENERO -->
         </div>
@@ -757,13 +666,13 @@
     </footer>
 
     <script src="js/carrito.js"></script>
+    <script src="js/logout.js"></script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-    <script src="js/filtro.js"></script>
     <script src="js/jquery.js"></script>
   </body>
 </html>

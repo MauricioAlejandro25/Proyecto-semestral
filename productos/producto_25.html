@@ -14,29 +14,49 @@
   <link rel="stylesheet" href="../css/inicio.css">
   <link rel="stylesheet" href="../css/producto.css">
   <title>Pagina producto</title>
+  <style>
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      left: -120px;
+    }
+
+    .carrito {
+      position: relative;
+      display: inline-block;
+      left: -40px;
+    }
+  </style>
 </head>
 
 <body class="bg-with">
-  <nav class="navbar navbar-expand-md navbar-dark bg-black">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black">
     <div class="container-fluid">
       <a class="navbar-brand" href="inicio.html">
         <i class="bi bi-gem"></i>
         <span class="text-info">ALL STYLE</span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#menu"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="menu">
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="../inicio.html"></a>
+            <a class="nav-link" aria-current="page" href="#"></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="../Marcas.html">MARCAS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../hombre.html">HOMBRE</a>
+            <a class="nav-link" href="../catalogo.html">CATÁLOGO</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="../mujeres.html">MUJER</a>
@@ -53,22 +73,78 @@
           <li class="nav-item">
             <a class="nav-link" href="../accinicio.html">ACCESORIOS</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../deportivo.html">DEPORTE</a>
+        </ul>
+      </div>
+
+      <div class="btn-group dropdown d-none d-lg-flex align-items-center">
+        <a href="../carrito.html" class="carrito btn btn-outline-info">
+          <i class="bi bi-cart4"></i>
+          <span id="cantidad-productos">
+            <script>
+              document.addEventListener("DOMContentLoaded", () => {
+                document.getElementById("cantidad-productos").innerHTML =
+                  cantidadProductos() || 0;
+              });
+            </script>
+          </span>
+        </a>
+
+        <span id="nombre_usuario" class="text-white">
+          <script>
+            const taxonomia =
+              localStorage.getItem("tipo_usuario") === "admin"
+                ? "Administrador"
+                : localStorage.getItem("usuario") || "Invitado";
+
+            document.getElementById("nombre_usuario").innerHTML = taxonomia;
+          </script>
+        </span>
+        <a
+          href="Login.html"
+          id="dropdownMenuButton"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+          class="dropdown-toggle btn-floating btn-sm text-white"
+          style="font-size: 25px"
+          ><i class="bi bi-person-circle"></i
+        ></a>
+
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <li>
+            <a class="dropdown-item d-block" id="btn-login" href="Login.html"
+              >Iniciar sesión</a
+            >
+          </li>
+          <li>
+            <a
+              class="dropdown-item d-block"
+              id="btn-login-administrador"
+              href="admin.inicio.html"
+              >Administrador</a
+            >
+          </li>
+          <li>
+            <a
+              class="dropdown-item d-none"
+              id="btn-administrar"
+              href="admin.html"
+              >Administrar</a
+            >
+          </li>
+          <li>
+            <a
+              class="dropdown-item d-none"
+              id="btn-usuario"
+              href="usuario.html"
+              >Editar perfil</a
+            >
+          </li>
+          <li>
+            <a class="dropdown-item d-none" href="#" id="btn-desconectar"
+              >Desconectar</a
+            >
           </li>
         </ul>
-        <hr class="d-md-none text-white-50">
-        <ul class="navbar-nav  flex-row flex-wrap text-light">
-          <li class="nav-item col-6 col-md-auto p-3">
-            <a href="carrito.html" class="btn-floating btn-sm text-white" style="font-size: 20px;"><i
-                class="bi bi-bag-fill"></i></a>
-            <small class="d-md-none ms-2">Facebook</small>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <a href="Login.html"> <button class="btn btn-outline-info d-none d-md-inline-block " type="submit">INICIA
-              SESION </button> </a>
-        </form>
       </div>
     </div>
   </nav>
@@ -87,9 +163,9 @@
         <span>En stock</span>
       </div>
       <div class="conteiner-details-product">
-        <div class="from-gruop">
-          <label for="colour">color</label>
-          <select name="colour" id="colour">
+        <div class="row form-g">
+          <label class="col-12" for="colour">Color</label>
+          <select class="col-12" name="colour" id="colour">
             <option disabled selected value="">
               Escoge una opcion
             </option>
@@ -98,9 +174,9 @@
             <option value="negro">Negro</option>
           </select>
         </div>
-        <div class="from-gruop">
-          <label for="size">Talla EUR</label>
-          <select name="size" id="size">
+        <div class="row form-g">
+          <label class="col-12" for="size">Talla EUR</label>
+          <select class="col-12" name="size" id="size">
             <option disabled selected value="">
               Escoge una opcion
             </option>
@@ -115,9 +191,24 @@
       </div>
       <div class="conteiner-add-cart">
         <div class="conteiner-quantity">
-          <input type="number" name="" id="" placeholder="1" value="1" min="1" class="input-quantity" />
+          <input
+            type="number"
+            name=""
+            id="cantidad"
+            placeholder="1"
+            value="1"
+            min="1"
+            class="input-quantity"
+          />
         </div>
-        <button class="btn-add-to-cart">
+        <button
+          class="btn-add-to-cart"
+          onclick="agregarAlCarrito({
+            nombre: 'NK HERITAGE BKPK - NIKE AOP BTS22',
+            precio: 94990,
+            cantidad: document.getElementById('cantidad').value
+          })"
+        >
           <i class="bi bi-plus-lg"></i>
           Añadir al carrito
         </button>
@@ -337,6 +428,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="../js/carrito.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"

@@ -29,6 +29,8 @@ if (ha_iniciado_sesion) {
     if (tipo_usuario == 'admin') {
         btn_administrar.classList.remove('d-none')
         btn_administrar.classList.add('d-block')
+        btn_usuario.classList.remove('d-block')
+        btn_usuario.classList.add('d-none')
     } else {
         btn_administrar.classList.remove('d-block')
         btn_administrar.classList.add('d-none')

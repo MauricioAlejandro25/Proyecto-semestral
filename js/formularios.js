@@ -6,7 +6,7 @@ const expresiones = {
 	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
 	password: /^.{4,12}$/, // 4 a 12 digitos.
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-    telefono: /^[0-9]{8}$/
+    telefono: /^[0-9]{8}$/,
 }
 
 const campos = {
@@ -14,7 +14,7 @@ const campos = {
 	nombre: false,
 	password: false,
 	correo: false,
-	telefono: false
+	telefono: false,
 }
 
 const validarFormulario = (e) => {
@@ -90,9 +90,10 @@ formulario_registro.addEventListener('submit', (e) => {
 			nombre,
 			password,
 			correo,
-			telefono
+			telefono,
 		};
 
+		// Almacenar usuario en el local storage del navegador
 		const usuarios_registrados = JSON.parse(localStorage.getItem('usuarios_registrados')) || [];
 
 		usuarios_registrados.push(usuario_registrado);
